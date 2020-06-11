@@ -1,5 +1,7 @@
 #include "View_Item.h"
 #include <SFML/Graphics.hpp>
+#include "ThrowLoad.cpp"
+
 View_Item::~View_Item()
 {
 
@@ -10,7 +12,11 @@ View_Item::View_Item()
 }
 View_Item::View_Item(String Path,int x,int y)
 {
-	item.loadFromFile(Path);
+	;
+	if (!item.loadFromFile(Path))
+	{
+		throw MyException("Error module load");
+	}
 	Image.setTexture(item);
 	this->x = x;
 	this->y = y;
