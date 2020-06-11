@@ -137,7 +137,7 @@ void Map_Windows::Start()
 				sleep(milliseconds(700));
 
 				window.getWindows().close();
-				Menu menu("Game", 800, 600, "Image/mapMenu.png");
+				Menu menu("Game", 800, 600, "Image/background.png");
 				menu.Start();
 			}
 			else if (Keyboard::isKeyPressed(Keyboard::Enter))

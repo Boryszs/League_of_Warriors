@@ -2,6 +2,7 @@
 #include "Menu.h"
 #include "Create_Window.h"
 #include <iostream>
+#include "DBcontroler.h"
 using namespace std;
 using namespace  sf;
 Login_Window::Login_Window() :window("Login", 273, 311,"Image/log_w.png")
@@ -68,6 +69,10 @@ void Login_Window::Start()
 				//check when input text who box 
 				if (rectangle_log.getGlobalBounds().contains(this->window.getWindows().mapPixelToCoords(sf::Mouse::getPosition(this->window.getWindows()))))
 				{
+					DBcontroler dbc;
+					Champion* champ = dbc.getChampion(1);
+					cout << *champ << endl;
+
 					window.getWindows().close();
 					Menu menu("Game", 800, 600, "Image/background.png");
 					menu.Start();
