@@ -144,6 +144,7 @@
     <ClCompile Include="Create_Window.cpp" />
     <ClCompile Include="DBcontroler.cpp" />
     <ClCompile Include="ErrorShow_Window.cpp" />
+    <ClCompile Include="Fight.cpp" />
     <ClCompile Include="Login_Window.cpp" />
     <ClCompile Include="Map_Windows.cpp" />
     <ClCompile Include="Menu.cpp" />
@@ -164,6 +165,7 @@
     <ClInclude Include="Create_Window.h" />
     <ClInclude Include="DBcontroler.h" />
     <ClInclude Include="ErrorShow_Window.h" />
+    <ClInclude Include="Fight.h" />
     <ClInclude Include="Login_Window.h" />
     <ClInclude Include="Map_Windows.h" />
     <ClInclude Include="Menu.h" />
