@@ -49,7 +49,7 @@ public:
 	RectangleShape col_r_d_2;
 
 	RectangleShape col_r_d_3;
-
+	//
 
 };
 
