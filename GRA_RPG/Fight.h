@@ -3,6 +3,8 @@
 #include "Champion.h"
 #include "string"
 
+
+//kom
 using namespace std;
 
 class Fight
