@@ -2,8 +2,6 @@
 #include <SFML/Graphics.hpp>
 #include "Window_Base.h"
 #include "View_Item.h"
-#include "Champion.h"
-#include "DBcontroler.h"
 
 using namespace std;
 using namespace sf;
@@ -12,12 +10,9 @@ Class use to show graphic city
 */
 class Map_Windows: public Window_Base
 {
-private:
-	Champion* champion;
-
 public:
 	//constructor
-	Map_Windows(String title, int width, int height, String backroundPath, Champion* champ);
+	Map_Windows(String title, int width, int height, String backroundPath);
 	Map_Windows();
 	//destructor
 	~Map_Windows();
@@ -34,22 +29,5 @@ public:
 	View_Item viewItem_figure;
 	sf::Clock clock;
 	IntRect rectSourceSprite;
-	DBcontroler dbcontroler;
-	RectangleShape col_l_u_1;
-	RectangleShape col_l_u_2;
-
-	RectangleShape col_r_u_1;
-	RectangleShape col_r_u_2;
-
-
-	RectangleShape col_l_d_1;
-	RectangleShape col_l_d_2;
-
-	RectangleShape col_r_d_1;
-	RectangleShape col_r_d_2;
-
-	RectangleShape col_r_d_3;
-
-
 };
 
