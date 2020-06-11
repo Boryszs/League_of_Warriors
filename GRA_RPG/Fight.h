@@ -7,6 +7,7 @@
 //kom
 using namespace std;
 
+//ghgh
 class Fight
 {
 	Champion* champ1{ nullptr };
