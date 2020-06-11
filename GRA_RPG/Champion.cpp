@@ -13,3 +13,5 @@ std::ostream& operator<<(std::ostream& out, const Champion& p)
 		" ]\nObrona[ " << p.defence << " ]\nSzczescie[ " << p.luck << " ]\n\n";
 	return out;
 }
+
+
