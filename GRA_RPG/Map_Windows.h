@@ -49,6 +49,23 @@ public:
 	RectangleShape col_r_d_2;
 
 	RectangleShape col_r_d_3;
+
+
+	DBcontroler dbcontroler;
+	RectangleShape col_l_u_1;
+	RectangleShape col_l_u_2;
+
+	RectangleShape col_r_u_1;
+	RectangleShape col_r_u_2;
+
+
+	RectangleShape col_l_d_1;
+	RectangleShape col_l_d_2;
+
+	RectangleShape col_r_d_1;
+	RectangleShape col_r_d_2;
+
+	RectangleShape col_r_d_3;
 	//
 
 };

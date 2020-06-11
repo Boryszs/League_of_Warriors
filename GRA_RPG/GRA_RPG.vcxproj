@@ -167,6 +167,7 @@
     <ClInclude Include="Login_Window.h" />
     <ClInclude Include="Map_Windows.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="Nagłówek.h" />
     <ClInclude Include="Restaurant_Window.h" />
     <ClInclude Include="Shop_Windows.h" />
     <ClInclude Include="View_Item.h" />
