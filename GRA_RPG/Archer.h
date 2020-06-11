@@ -9,5 +9,9 @@ public:
 
 	virtual int attack() override;
 	virtual int block() override;
-	//virtual int skill() override;
+
+	virtual Archer* clone() const
+	{
+		return new Archer(*this);
+	}
 };
