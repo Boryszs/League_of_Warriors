@@ -3,6 +3,7 @@
 #include "Window_Base.h"
 #include <SFML/Graphics.hpp>
 #include <string>
+#include "Champion.h"
 
 using namespace std;
 using namespace sf;
@@ -11,10 +12,12 @@ Class Menu
 */
 class Menu: public Window_Base
 {
+private:
+	Champion* champion;
 public:
 	//constructor
 	Menu();
-	Menu(String,int,int,String);
+	Menu(String,int,int,String, Champion* champ);
 	//destructor
 	~Menu();
 	//function start showing 
@@ -32,7 +35,7 @@ public:
 	//object buttton to create and show button
 	Button buttonStart;
 	Button buttonExit;
-
+	
 };
 
 

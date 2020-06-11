@@ -135,3 +135,19 @@ Champion* DBcontroler::getChampion(int id)
 }
 
 
+void DBcontroler::updateChampion(Champion* champ)
+{
+	string qerry = "UPDATE heroe SET level=" + to_string(champ->getLevel()) + ",exp=" + to_string(champ->getExperince()) + ",money=" + to_string(champ->getMoney()) + ",health=" + to_string(champ->getHealth()) + ",strength=" + to_string(champ->getStrength()) + ",dexterity=" + to_string(champ->getDexterity()) + ",magic=" + to_string(champ->getMagic()) + ",defence=" + to_string(champ->getDefence()) + ",luck=" + to_string(champ->getLuck()) + " WHERE idHeroe=" + to_string(champ->getId()) + ";";
+	const char* q = qerry.c_str();
+	qstate = mysql_query(conn, q);
+
+	if (!qstate)
+	{
+	
+	}
+	else
+	{
+		cout << "error connect database"<< endl;
+
+	}
+}
