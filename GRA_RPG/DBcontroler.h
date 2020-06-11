@@ -17,6 +17,8 @@ public:
 	// funkcja sprawdzaj¹ca czy dany u¿ytkownik istnieje
 	bool checkUser(int id);
 	bool checkUser(std::string login);
+	//function update value champion in database 
+	void updateChampion(Champion *champ);
 	// funkcja dodaj¹ca usera
 	bool addUser(std::string login, std::string password);
 	// funkcja zwracaj¹ca idUsers na podstawie poprawnych danych (login i passwd) z bazy

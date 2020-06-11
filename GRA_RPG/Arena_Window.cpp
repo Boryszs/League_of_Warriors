@@ -4,9 +4,9 @@
 #include "DBcontroler.h"
 #include <thread>
 
-Arena_Window::Arena_Window():window("Arena",950, 950, "Image/mapUi_arena.png"),hydra("Image/m2.png",560,560)
+Arena_Window::Arena_Window(Champion* champ):window("Arena",950, 950, "Image/mapUi_arena.png"),hydra("Image/m2.png",560,560)
 {
-
+	champion = champ;
 }
 
 Arena_Window::~Arena_Window() 
@@ -56,7 +56,7 @@ void Arena_Window::Start()
 		{
 		     sleep(milliseconds(700));
 			 window.getWindows().close();
-			 Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png");
+			 Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png",champion);
 			 map_windows.setPosition_figure(80, 805);
 			 map_windows.Start();
 		}

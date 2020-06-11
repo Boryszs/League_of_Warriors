@@ -1,8 +1,16 @@
 #include <iostream>
+#include <string>
+using namespace std;
 struct MyException : public std::exception
 {
-	const char* what() const throw ()
+	string error;
+
+	MyException(string err)
 	{
-		return "Error no load module";
+		error = err;
+	}
+	const string what() throw ()
+	{
+		return error;
 	}
 };

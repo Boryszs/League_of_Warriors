@@ -20,7 +20,7 @@ Window_Base::Window_Base(String title, int width, int height, String backroundPa
 	window.create(sf::VideoMode(width, height), title);
 	if (!background.loadFromFile(backroundPath))
 	{
-		throw MyException();
+		throw MyException("Error module load");
 	}
 	backroundImage.setTexture(background);
 }
