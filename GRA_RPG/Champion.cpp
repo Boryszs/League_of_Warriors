@@ -5,6 +5,18 @@ Champion::Champion(const unsigned id, const std::string n, unsigned int l, unsig
 	id_champion(id), name(n), level(l), experience(e), money(m), health(he), strength(st), dexterity(de), magic(ma), defence(def), luck(lu)
 {}
 
+int Champion::heal()
+{
+	int oldhealth = health;
+	int newhealth = health / 3;
+
+	if (oldhealth + newhealth > health)
+		return health;
+	else
+		return oldhealth + newhealth;
+
+}
+
 std::ostream& operator<<(std::ostream& out, const Champion& p)
 {
 	out << "id[ " << p.id_champion << " ]\nNazwaPostaci[ " << p.name << " ]\nPoziom[ " << p.level << " ]\n" <<

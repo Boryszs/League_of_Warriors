@@ -10,5 +10,9 @@ public:
 		Champion(id, n, l, e, m, he, st, de, ma, def, lu) {}
 
 	virtual int attack() override;
-	//virtual int skill() override;
+
+	virtual Wizzard* clone() const
+	{
+		return new Wizzard(*this);
+	}
 };

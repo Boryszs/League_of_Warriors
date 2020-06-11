@@ -6,7 +6,7 @@ using namespace std;
 int Archer::attack()
 {
     int min_attack = dexterity;
-    int max_attack = dexterity + strength * 0.50;
+    int max_attack = dexterity + strength * 0.25;
 
     random_device dev;
     mt19937_64 rng(dev());

@@ -3,11 +3,10 @@
 
 class Champion
 {
-private:
+protected:
 	const unsigned int id_champion;
 	const std::string name;
 
-protected:
 	unsigned int level;
 	unsigned int experience;
 	double money;
@@ -24,11 +23,14 @@ public:
 
 	virtual int attack() { return 0; }
 	virtual int block() { return 0; }
-	//virtual int skill();		-- implementowanie w czasie walki na arenie --
+	//virtual int skill() { return 0; }
+	int heal();
+	void setHealth(int hp) { health = hp; }
+
+	virtual Champion* clone() const = 0;
 
 	int getHealth() { return health; }
 	std::string getName() { return name; }
-
 	friend std::ostream& operator<<(std::ostream& out, const Champion& p);
 
 	// dodawanie w bazie oraz w klasie 
