@@ -13,7 +13,7 @@ Menu::Menu()
 	//this->shape.setRadius(100);
 }
 
-Menu::Menu(String title,int width,int height,String backroundPath):buttonStart(),buttonExit(),window(title,width,height,backroundPath)
+Menu::Menu(String title,int width,int height,String backroundPath, Champion* champ):buttonStart(),buttonExit(),window(title,width,height,backroundPath)
 {
 	//window.create(sf::VideoMode(width, height), title);
 	//this->shape.setRadius(100);
@@ -23,11 +23,12 @@ Menu::Menu(String title,int width,int height,String backroundPath):buttonStart()
 	backroundImage.setTexture(background);
 	buttonStart.setButton("Rozpocznij", 200, 50, Color::Black, 300, 250,340,260);
 	buttonExit.setButton("Zakoncz", 200, 50, Color::Black, 300, 350,350, 360);
-
+	champion = champ;
 }
 
 void Menu::Start()
 {
+
 	while (window.getWindows().isOpen())
 	{
 		sf::Event event;
@@ -41,7 +42,7 @@ void Menu::Start()
 				if (buttonStart.getButton().getGlobalBounds().contains(this->window.getWindows().mapPixelToCoords(sf::Mouse::getPosition(this->window.getWindows()))))
 				{
 					window.getWindows().close();
-					Map_Windows map_windows("Gra",950,950,"Image/mapo.png");
+					Map_Windows map_windows("Gra",950,950,"Image/mapo.png",champion);
 					map_windows.Start();
 				}
 

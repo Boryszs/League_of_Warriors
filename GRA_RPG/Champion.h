@@ -35,9 +35,52 @@ public:
 
 	// dodawanie w bazie oraz w klasie 
 	void addHealth(int hp) { health += hp; }
-	void addStrength();
-	void addDexterity();
-	void addMagic();
-	void addDefence();
-	void addLuck();
+	void addStrength(int stren) { strength += stren; }
+	void addDexterity(int dex) { dexterity += dex; }
+	void addMagic(int mag) { magic += mag; }
+	void addDefence(int def) { defence += def; }
+	void addLuck(int luc) { luck += luc; }
+	void addMoney(int mon) { money += mon; }
+	
+	int getId()
+	{
+		return id_champion;
+	}
+
+	int getExperince()
+	{
+		return experience;
+	}
+
+	int getLevel()
+	{
+		return level;
+	}
+
+	int getMoney()
+	{
+		return money;
+	}
+
+	int getStrength()
+	{
+		return strength;
+	}
+	int getDexterity()
+	{
+		return dexterity;
+	}
+	int getMagic()
+	{
+		return magic;
+	}
+	int getDefence()
+	{
+		return defence;
+	}
+	int getLuck()
+	{
+		return luck;
+	}
+
 };

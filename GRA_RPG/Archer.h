@@ -10,7 +10,7 @@ public:
 	virtual int attack() override;
 	virtual int block() override;
 
-	//komentarz
+	//komentarz123
 	virtual Archer* clone() const
 	{
 		return new Archer(*this);
