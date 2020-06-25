@@ -18,7 +18,7 @@ Arena_Window::~Arena_Window()
 {
 
 }
-
+// map
 void Arena_Window::randMonster()
 {
 	random_device dev;
