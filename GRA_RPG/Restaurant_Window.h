@@ -1,6 +1,7 @@
 #pragma once
 #include "Window_Base.h"
 #include "Champion.h"
+#include "View_Item.h"
 /*
 Class restaurant to representation graphic Window object restaurant
 */

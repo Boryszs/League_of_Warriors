@@ -5,9 +5,11 @@
 #include <SFML/Graphics.hpp>
 #include "DBcontroler.h"
 #include "Champion.h"
+#include <mysql.h>
+#include "ThrowLoad.cpp"
 using namespace std;
 using namespace  sf;
-Login_Window::Login_Window() :window("Login", 273, 311,"Image/log_w.png")
+Login_Window::Login_Window() :window("Login", 273, 311,"Image/log_w.png"), dbcontroler()
 
 {
 	//load arial fonts
@@ -48,6 +50,7 @@ Login_Window::Login_Window() :window("Login", 273, 311,"Image/log_w.png")
 	Password.setPosition(30, 105);
 
 	flaga = 0;
+	
 }
 
 Login_Window::~Login_Window()
@@ -57,6 +60,8 @@ Login_Window::~Login_Window()
 
 void Login_Window::Start()
 {
+	
+
 	while (window.getWindows().isOpen())
 	{
 		sf::Event event;
@@ -64,8 +69,7 @@ void Login_Window::Start()
 		{
 			if (event.type == sf::Event::Closed)
 				window.getWindows().close();
-		
-
+			cout << login<<endl;
 			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 			{
 				//check when input text who box 
@@ -76,7 +80,7 @@ void Login_Window::Start()
 					cout << *champ << endl;
 
 					window.getWindows().close();
-					Menu menu("Game", 800, 600, "Image/background.png",champ);
+					Menu menu("Game", 800, 600, "Image/background.png");
 					menu.Start();
 				}
 				if (rectangle_create.getGlobalBounds().contains(this->window.getWindows().mapPixelToCoords(sf::Mouse::getPosition(this->window.getWindows()))))
@@ -115,7 +119,8 @@ void Login_Window::Start()
 			}
 
 			//delete character in text username and password
-			if (event.key.code == sf::Keyboard::BackSpace) {
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace))
+			{
 				if (login.size() > 0 && flaga == 1)
 				{
 					login.resize(login.size() - 1);

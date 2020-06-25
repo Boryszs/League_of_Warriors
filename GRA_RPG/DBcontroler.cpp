@@ -83,20 +83,16 @@ MYSQL_ROW DBcontroler::getUser(std::string login, std::string password)
 	return nullptr;
 }
 
-MYSQL_ROW DBcontroler::getChampions(int id)
+MYSQL_RES* DBcontroler::getChampions(int id)
 {
-	string qerry = "SELECT idHeroes FROM heroes WHERE Users_idUsers = " + to_string(id) + ";";
+	string qerry = "SELECT * FROM `heroes` INNER JOIN `heroe` ON heroes.idHeroes=heroe.idHeroe WHERE `Users_idUsers` = " + to_string(id) + ";";
 	const char* q = qerry.c_str();
 	qstate = mysql_query(conn, q);
 
 	if (!qstate)
 	{
 		res = mysql_store_result(conn);
-		while (row = mysql_fetch_row(res))
-		{
-			cout << "id postaci = " << row[0] << endl;
-		}
-		return row;
+		return res;
 	}
 	return nullptr;
 }
@@ -151,3 +147,40 @@ void DBcontroler::updateChampion(Champion* champ)
 
 	}
 }
+
+
+void DBcontroler::addHeroes(int idUser)
+{
+	string qerry = "CREATE or REPLACE TRIGGER createChampion AFTER INSERT on heroe FOR EACH ROW INSERT INTO heroes VALUES ('"+to_string(idUser)+"', new.idHeroe);";
+	const char* q = qerry.c_str();
+	qstate = mysql_query(conn, q);
+	cout << qerry;
+	if (!qstate)
+	{
+
+	}
+	else
+	{
+		cout << "error connect database" << endl;
+
+	}
+}
+
+void DBcontroler::addChampion(Champion* champ,int class_hero)
+{
+	string qerry = "INSERT INTO heroe (idHeroe,class_heroe, name, level, exp, money, health, strength, dexterity, magic, defence, luck) VALUES(null,"+ to_string(class_hero)+",'"+champ->getName()+"',"+to_string(champ->getLevel()) + "," + to_string(champ->getExperince()) + "," + to_string(champ->getMoney()) + "," + to_string(champ->getHealth()) + "," + to_string(champ->getStrength()) + "," + to_string(champ->getDexterity()) + "," + to_string(champ->getMagic()) + "," + to_string(champ->getDefence()) + "," + to_string(champ->getLuck())+ ");";
+	const char* q = qerry.c_str();
+	qstate = mysql_query(conn, q);
+	cout << qerry;
+	if (!qstate)
+	{
+		addHeroes(1);
+	}
+	else
+	{
+		cout << "error connect database" << endl;
+
+	}
+}
+
+//CREATE or REPLACE TRIGGER createChampion AFTER INSERT on heroe FOR EACH ROW INSERT INTO heroes VALUES (null, new.idHeroe)

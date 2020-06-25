@@ -50,7 +50,13 @@ void Arena_Window::Start()
 		while (window.getWindows().pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
+			{
+				sleep(milliseconds(700));
 				window.getWindows().close();
+				Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion);
+				map_windows.setPosition_figure(80, 805);
+				map_windows.Start();
+			}
 		}
 	  if (Keyboard::isKeyPressed(Keyboard::Escape))
 		{

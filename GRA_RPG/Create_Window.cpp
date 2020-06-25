@@ -5,7 +5,6 @@
 using namespace std;
 using namespace  sf;
 Create_Window::Create_Window() :window("Login", 273, 311, "Image/create_w.png")
-
 {
 	//load arial fonts
 	arial.loadFromFile("Fonts/Arial.ttf");
@@ -101,7 +100,8 @@ void Create_Window::Start()
 			}
 
 			//delete character in text username and password
-			if (event.key.code == sf::Keyboard::BackSpace) {
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace))
+			{
 				if (login.size() > 0 && flaga == 1)
 				{
 					login.resize(login.size() - 1);

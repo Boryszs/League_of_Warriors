@@ -34,5 +34,9 @@ private:
 	Text magic;
 	Text defence;
 	Text lucky;
+	View_Item mouse;
+	Text money;
+	int count;
+	int hei;
 };
 

@@ -137,6 +137,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AddHeroe_Window.cpp" />
     <ClCompile Include="Archer.cpp" />
     <ClCompile Include="Arena_Window.cpp" />
     <ClCompile Include="Button.cpp" />
@@ -158,6 +159,7 @@
     <ClCompile Include="Wizzard.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AddHeroe_Window.h" />
     <ClInclude Include="Archer.h" />
     <ClInclude Include="Arena_Window.h" />
     <ClInclude Include="Button.h" />
