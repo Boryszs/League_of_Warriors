@@ -27,6 +27,8 @@ public:
 		delete champ2;
 	}
 
+	void heal(Champion* champ);
+
 	void startFigft();
 
 	friend std::ostream& operator<<(std::ostream& out, const Fight& p);

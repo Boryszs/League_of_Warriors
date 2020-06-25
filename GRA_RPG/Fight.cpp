@@ -9,6 +9,21 @@ std::ostream& operator<<(std::ostream& out, const Fight& p)
     return out;
 }
 
+void Fight::heal(Champion* champ)
+{
+    if (flag_use_skil == false)
+    {
+        int oldhealth = champ1->getHealth();
+        int newhealth = champ1->getHealth() / 3;
+
+        if (oldhealth + newhealth > champ->getHealth())
+            champ1->setHealth(champ->getHealth());
+        else
+            champ1->setHealth(oldhealth + newhealth);
+        flag_use_skil = true;
+    }
+}
+
 void Fight::startFigft()
 {
     while (champ1->getHealth() > 0 && champ2->getHealth() > 0)
