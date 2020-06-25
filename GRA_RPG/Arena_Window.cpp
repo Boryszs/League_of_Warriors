@@ -89,42 +89,41 @@ void Arena_Window::Start()
 			if (event.type == sf::Event::Closed)
 			{
 				thread_fight.terminate();
-			{
-				sleep(milliseconds(700));
-				window.getWindows().close();
-			}
-
-			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-			{
-				if (getClickHeal().getGlobalBounds().contains(this->window.getWindows().mapPixelToCoords(sf::Mouse::getPosition(this->window.getWindows()))))
 				{
-					fight.heal(wsk1);
+					sleep(milliseconds(700));
+					window.getWindows().close();
+					Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion);
+					map_windows.setPosition_figure(80, 805);
+					map_windows.Start();
+				}
+
+				if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+				{
+					if (getClickHeal().getGlobalBounds().contains(this->window.getWindows().mapPixelToCoords(sf::Mouse::getPosition(this->window.getWindows()))))
+					{
+						fight.heal(wsk1);
+					}
 				}
 			}
 		}
-		if (Keyboard::isKeyPressed(Keyboard::Escape))
-				Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion);
-				map_windows.setPosition_figure(80, 805);
-				map_windows.Start();
-			}
-		}
-	  if (Keyboard::isKeyPressed(Keyboard::Escape))
-		{
-			thread_fight.terminate();
-		     sleep(milliseconds(700));
-			 window.getWindows().close();
-			 Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png",champion);
-			 map_windows.setPosition_figure(80, 805);
-			 map_windows.Start();
-		}
 
-	  window.getWindows().clear();
-	  window.getWindows().draw(getClickHeal());
-	  window.getWindows().draw(window.backroundImage);
-	  window.getWindows().draw(text1);
-	  window.getWindows().draw(text2);
-	  window.getWindows().draw(heal.getImage());
-	  window.getWindows().draw(hydra.getImage());
-	  window.getWindows().display();
+	if (Keyboard::isKeyPressed(Keyboard::Escape))
+	{
+		thread_fight.terminate();
+		sleep(milliseconds(700));
+		window.getWindows().close();
+		Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png",champion);
+		map_windows.setPosition_figure(80, 805);
+		map_windows.Start();
+	}
+
+	window.getWindows().clear();
+	window.getWindows().draw(getClickHeal());
+	window.getWindows().draw(window.backroundImage);
+	window.getWindows().draw(text1);
+	window.getWindows().draw(text2);
+	window.getWindows().draw(heal.getImage());
+	window.getWindows().draw(hydra.getImage());
+	window.getWindows().display();
 	}
 }
