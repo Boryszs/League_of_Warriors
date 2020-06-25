@@ -17,6 +17,17 @@ int Champion::heal()
 
 }
 
+void Champion::addExperience(int exp)
+{
+	experience += exp;
+	if (experience >= (1000 * level))
+	{
+		experience = 0;
+		level += 1;
+	}
+		
+}
+
 std::ostream& operator<<(std::ostream& out, const Champion& p)
 {
 	out << "id[ " << p.id_champion << " ]\nNazwaPostaci[ " << p.name << " ]\nPoziom[ " << p.level << " ]\n" <<

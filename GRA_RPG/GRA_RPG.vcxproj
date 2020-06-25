@@ -149,6 +149,7 @@
     <ClCompile Include="Login_Window.cpp" />
     <ClCompile Include="Map_Windows.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Restaurant_Window.cpp" />
     <ClCompile Include="Shop_Windows.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -171,6 +172,7 @@
     <ClInclude Include="Login_Window.h" />
     <ClInclude Include="Map_Windows.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="Monster.h" />
     <ClInclude Include="Nagłówek.h" />
     <ClInclude Include="Restaurant_Window.h" />
     <ClInclude Include="Shop_Windows.h" />

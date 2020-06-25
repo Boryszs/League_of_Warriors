@@ -3,6 +3,8 @@
 #include "Champion.h"
 #include "string"
 
+
+//kom
 using namespace std;
 
 //ghgh
@@ -24,6 +26,8 @@ public:
 		delete champ1;
 		delete champ2;
 	}
+
+	void heal(Champion* champ);
 
 	void startFigft();
 

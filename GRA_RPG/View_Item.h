@@ -18,6 +18,7 @@ public:
 	Texture item;
 	//function return object to show graphic
 	Sprite &getImage();
+	void set_Image(String Path, int x, int y);
 private:
 	//value to represent position graphic
 	int x,y;

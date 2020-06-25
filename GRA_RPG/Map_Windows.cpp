@@ -70,8 +70,7 @@ void Map_Windows::setPosition_figure(int x,int y)
 
 
 void Map_Windows::Start()
-{
-	
+{	
 	viewItem_figure.getImage().setTextureRect(rectSourceSprite);
 	while (window.getWindows().isOpen())
 	{
