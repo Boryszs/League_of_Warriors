@@ -6,15 +6,16 @@
 #include "Monster.h"
 #include <random>
 
-Arena_Window::Arena_Window(Champion* champ):window("Arena",950, 950, "Image/mapUi_arena.png"), heal("Image/heal.png", 130, 620)
+Arena_Window::Arena_Window(Champion* champ ,int idUse) :window("Arena", 950, 950, "Image/mapUi_arena.png"), heal("Image/heal.png", 130, 620)
 {
 	champion = champ;
+	idUser = idUse;
 	click_heal.setSize(sf::Vector2f(200, 200));
 	click_heal.setPosition(120, 600);
 	randMonster();
 }
 
-Arena_Window::~Arena_Window() 
+Arena_Window::~Arena_Window()
 {
 
 }
@@ -40,8 +41,8 @@ void Arena_Window::randMonster()
 
 void setText(sf::Text* t1, string s1, sf::Text* t2, string s2)
 {
-		t1->setString(s1);
-		t2->setString(s2);
+	t1->setString(s1);
+	t2->setString(s2);
 }
 
 void Arena_Window::Start()
@@ -92,7 +93,7 @@ void Arena_Window::Start()
 				{
 					sleep(milliseconds(700));
 					window.getWindows().close();
-					Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion);
+					Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion,idUser);
 					map_windows.setPosition_figure(80, 805);
 					map_windows.Start();
 				}
@@ -107,23 +108,23 @@ void Arena_Window::Start()
 			}
 		}
 
-	if (Keyboard::isKeyPressed(Keyboard::Escape))
-	{
-		thread_fight.terminate();
-		sleep(milliseconds(700));
-		window.getWindows().close();
-		Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png",champion);
-		map_windows.setPosition_figure(80, 805);
-		map_windows.Start();
-	}
+		if (Keyboard::isKeyPressed(Keyboard::Escape))
+		{
+			thread_fight.terminate();
+			sleep(milliseconds(700));
+			window.getWindows().close();
+			Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion,idUser);
+			map_windows.setPosition_figure(80, 805);
+			map_windows.Start();
+		}
 
-	window.getWindows().clear();
-	window.getWindows().draw(getClickHeal());
-	window.getWindows().draw(window.backroundImage);
-	window.getWindows().draw(text1);
-	window.getWindows().draw(text2);
-	window.getWindows().draw(heal.getImage());
-	window.getWindows().draw(hydra.getImage());
-	window.getWindows().display();
+		window.getWindows().clear();
+		window.getWindows().draw(getClickHeal());
+		window.getWindows().draw(window.backroundImage);
+		window.getWindows().draw(text1);
+		window.getWindows().draw(text2);
+		window.getWindows().draw(heal.getImage());
+		window.getWindows().draw(hydra.getImage());
+		window.getWindows().display();
 	}
 }

@@ -2,11 +2,11 @@
 #include "Champion.h"
 #include <string>
 
-Shop_Windows::Shop_Windows(Champion* champ):window("Shop", 950, 950, "Image/mapUi_shop.png"),mouse("Image/mysz.png", 200, 790)
+Shop_Windows::Shop_Windows(Champion* champ,int idUse):window("Shop", 950, 950, "Image/mapUi_shop.png"),mouse("Image/mysz.png", 200, 790)
 {
 	hei = 1;
 	champion = champ;
-
+	idUser = idUse;
 	//recrtangle use 
 	r_health.setSize(sf::Vector2f(36, 36));
 	r_health.setPosition(97, 308);
@@ -103,7 +103,7 @@ void Shop_Windows::Start()
 			{
 				sleep(milliseconds(700));
 				window.getWindows().close();
-				Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion);
+				Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion,idUser);
 				map_windows.setPosition_figure(870, 220);
 				map_windows.Start();
 			}
@@ -164,7 +164,7 @@ void Shop_Windows::Start()
 			{
 				sleep(milliseconds(700));
 				window.getWindows().close();
-				Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion);
+				Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion,idUser);
 				map_windows.setPosition_figure(870, 220);
 				map_windows.Start();
 			}

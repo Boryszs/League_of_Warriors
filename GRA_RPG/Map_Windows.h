@@ -14,10 +14,10 @@ class Map_Windows: public Window_Base
 {
 private:
 	Champion* champion;
-
+	int idUser;
 public:
 	//constructor
-	Map_Windows(String title, int width, int height, String backroundPath, Champion* champ);
+	Map_Windows(String title, int width, int height, String backroundPath, Champion* champ, int idUser);
 	Map_Windows();
 	//destructor
 	~Map_Windows();
@@ -34,7 +34,9 @@ public:
 	View_Item viewItem_figure;
 	sf::Clock clock;
 	IntRect rectSourceSprite;
+
 	DBcontroler dbcontroler;
+
 	RectangleShape col_l_u_1;
 	RectangleShape col_l_u_2;
 

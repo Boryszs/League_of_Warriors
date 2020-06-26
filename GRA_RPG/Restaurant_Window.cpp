@@ -1,9 +1,10 @@
 #include "Restaurant_Window.h"
 #include "Map_Windows.h"
 
-Restaurant_Window::Restaurant_Window(Champion* champ) :window("Restaurant", 950, 950, "Image/mapUi_res.png")
+Restaurant_Window::Restaurant_Window(Champion* champ,int idUse) :window("Restaurant", 950, 950, "Image/mapUi_res.png")
 {
 	champion = champ;
+	idUser = idUse;
 }
 
 Restaurant_Window::~Restaurant_Window()
@@ -23,7 +24,7 @@ void Restaurant_Window::Start()
 			{
 				sleep(milliseconds(700));
 				window.getWindows().close();
-				Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion);
+				Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion,idUser);
 				map_windows.setPosition_figure(840, 660);
 				map_windows.Start();
 			}
@@ -34,7 +35,7 @@ void Restaurant_Window::Start()
 		{
 			sleep(milliseconds(700));
 			window.getWindows().close();
-			Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png",champion);
+			Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png",champion,idUser);
 			map_windows.setPosition_figure(840, 660);
 			map_windows.Start();
 		}

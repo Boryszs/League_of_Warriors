@@ -48,7 +48,7 @@ bool DBcontroler::checkUser(std::string login)
 
 bool DBcontroler::addUser(const std::string login, const std::string password)
 {
-	string querry = "INSERT INTO users (idUsers, login, passwd) VALUES (null, '" + login + "', '" + password + "');";
+	string querry = "INSERT INTO users (idUsers, login, passwd) VALUES (null, '" + login + "',md5( '" + password + "'));";
 	const char* q = querry.c_str();
 	qstate = mysql_query(conn, q);
 	if (!qstate)
@@ -67,7 +67,7 @@ MYSQL_ROW DBcontroler::getUser(std::string login, std::string password)
 	{
 		res = mysql_store_result(conn);
 		row = mysql_fetch_row(res);
-		string query = "SELECT idUsers FROM users WHERE login = '" + login + "' and passwd = '" + row[0] + "';";
+		string query = "SELECT idUsers FROM users WHERE login = '" + login + "' and passwd = md5('" + password + "');";
 		const char* q = query.c_str();
 		qstate = mysql_query(conn, q);
 
@@ -108,6 +108,7 @@ Champion* DBcontroler::getChampion(int id)
 	{
 		res = mysql_store_result(conn);
 		row = mysql_fetch_row(res);
+		//cout << row[0];
 		const unsigned int idHeroes = atoi(row[0]);
 		const string name = row[2];
 		const unsigned int level = atoi(row[3]);
@@ -128,6 +129,23 @@ Champion* DBcontroler::getChampion(int id)
 			champ = new Wizzard(idHeroes, name, level, experience, money, health, strength, dexterity, magic, defence, luck);
 	}
 	return champ;
+}
+
+MYSQL_ROW DBcontroler::getProf(int id)
+{
+	string query = "SELECT class_heroe FROM heroe WHERE idHeroe="+to_string(id)+";";
+	const char* q = query.c_str();
+	qstate = mysql_query(conn, q);
+	if (!qstate)
+	{
+		res = mysql_store_result(conn);
+		row = mysql_fetch_row(res);
+
+			return row;
+	}
+
+
+	return nullptr;
 }
 
 
@@ -151,7 +169,7 @@ void DBcontroler::updateChampion(Champion* champ)
 
 void DBcontroler::addHeroes(int idUser)
 {
-	string qerry = "CREATE or REPLACE TRIGGER createChampion AFTER INSERT on heroe FOR EACH ROW INSERT INTO heroes VALUES ('"+to_string(idUser)+"', new.idHeroe);";
+	string qerry = "INSERT INTO heroes VALUES ("+to_string(idUser)+",(SELECT idHeroe FROM heroe ORDER BY idHeroe DESC LIMIT 1));";
 	const char* q = qerry.c_str();
 	qstate = mysql_query(conn, q);
 	cout << qerry;
@@ -161,20 +179,21 @@ void DBcontroler::addHeroes(int idUser)
 	}
 	else
 	{
-		cout << "error connect database" << endl;
+		cout << "error connect database1" << endl;
 
 	}
 }
 
-void DBcontroler::addChampion(Champion* champ,int class_hero)
+void DBcontroler::addChampion(Champion* champ,int class_hero ,int idUser)
 {
-	string qerry = "INSERT INTO heroe (idHeroe,class_heroe, name, level, exp, money, health, strength, dexterity, magic, defence, luck) VALUES(null,"+ to_string(class_hero)+",'"+champ->getName()+"',"+to_string(champ->getLevel()) + "," + to_string(champ->getExperince()) + "," + to_string(champ->getMoney()) + "," + to_string(champ->getHealth()) + "," + to_string(champ->getStrength()) + "," + to_string(champ->getDexterity()) + "," + to_string(champ->getMagic()) + "," + to_string(champ->getDefence()) + "," + to_string(champ->getLuck())+ ");";
+	string qerry = "INSERT INTO heroe (idHeroe,class_heroe, name, level, exp, money, health, strength, dexterity, magic, defence, luck) VALUES(null, "+ to_string(class_hero)+",'"+champ->getName()+"',"+to_string(champ->getLevel()) + "," + to_string(champ->getExperince()) + "," + to_string(champ->getMoney()) + "," + to_string(champ->getHealth()) + "," + to_string(champ->getStrength()) + "," + to_string(champ->getDexterity()) + "," + to_string(champ->getMagic()) + "," + to_string(champ->getDefence()) + "," + to_string(champ->getLuck())+ ");";
 	const char* q = qerry.c_str();
 	qstate = mysql_query(conn, q);
 	cout << qerry;
 	if (!qstate)
 	{
-		addHeroes(1);
+		
+		addHeroes(idUser);
 	}
 	else
 	{
@@ -183,4 +202,37 @@ void DBcontroler::addChampion(Champion* champ,int class_hero)
 	}
 }
 
-//CREATE or REPLACE TRIGGER createChampion AFTER INSERT on heroe FOR EACH ROW INSERT INTO heroes VALUES (null, new.idHeroe)
+void DBcontroler::deleteHeroes(int idUser, int idChampion)
+{
+	string qerry = "DELETE FROM heroes WHERE Users_idUsers="+to_string(idUser) +" and "+"idHeroes="+ to_string(idChampion) +";";
+	const char* q = qerry.c_str();
+	qstate = mysql_query(conn, q);
+	cout << qerry;
+	if (!qstate)
+	{
+		deleteHeroe(idChampion);
+	}
+	else
+	{
+		cout << "error connect database" << endl;
+
+	}
+}
+
+void DBcontroler::deleteHeroe(int idChamp)
+{
+	string qerry = "DELETE FROM heroe WHERE idHeroe=" + to_string(idChamp) + ";";
+	const char* q = qerry.c_str();
+	qstate = mysql_query(conn, q);
+	cout << qerry;
+	if (!qstate)
+	{
+
+	}
+	else
+	{
+		cout << "error connect database" << endl;
+
+	}
+}
+//DELETE FROM `heroes` WHERE `Users_idUsers` and `idHeroes`

@@ -9,13 +9,14 @@ class Restaurant_Window:public Window_Base
 {
 public:
 	//consttructor
-	Restaurant_Window(Champion* champ);
+	Restaurant_Window(Champion* champ,int idUse);
 	//destructor
 	~Restaurant_Window();
 	//function start showing 
 	void Start();
 private:
 	//bsae window class use to create window
+	int idUser;
 	Window_Base window;
 	Champion* champion;
 };

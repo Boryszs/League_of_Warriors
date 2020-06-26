@@ -10,9 +10,9 @@
 using namespace std;
 using namespace  sf;
 Login_Window::Login_Window() :window("Login", 273, 311,"Image/log_w.png"), dbcontroler()
-
 {
 	//load arial fonts
+	idUser = 1;
 	arial.loadFromFile("Fonts/Arial.ttf");
 	rectangle_log.setSize(sf::Vector2f(170, 30));
 	rectangle_log.setPosition(50, 160);
@@ -48,9 +48,8 @@ Login_Window::Login_Window() :window("Login", 273, 311,"Image/log_w.png"), dbcon
 	Password.setFont(arial);
 	Password.setCharacterSize(16);
 	Password.setPosition(30, 105);
-
+	idUser = 1;
 	flaga = 0;
-	
 }
 
 Login_Window::~Login_Window()
@@ -69,24 +68,29 @@ void Login_Window::Start()
 		{
 			if (event.type == sf::Event::Closed)
 				window.getWindows().close();
-			cout << login<<endl;
+			//cout << login<<endl;
 			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 			{
 				//check when input text who box 
 				if (rectangle_log.getGlobalBounds().contains(this->window.getWindows().mapPixelToCoords(sf::Mouse::getPosition(this->window.getWindows()))))
 				{
-					DBcontroler dbc;
-					Champion* champ = dbc.getChampion(1);
-					cout << *champ << endl;
 
-					window.getWindows().close();
-					Menu menu("Game", 800, 600, "Image/background.png");
-					menu.Start();
+					if (dbcontroler.getUser(login, password) != nullptr)
+					{
+						MYSQL_ROW row = dbcontroler.getUser(login, password);
+						//Champion* champ = dbcontroler.getChampion(atoi(row[0]));
+						//cout << *champ << endl;
+
+						window.getWindows().close();
+						cout << row[0];
+						Menu menu("Game", 800, 600, "Image/background.png", atoi(row[0]));
+						menu.Start();
+					}
 				}
 				if (rectangle_create.getGlobalBounds().contains(this->window.getWindows().mapPixelToCoords(sf::Mouse::getPosition(this->window.getWindows()))))
 				{
 					window.getWindows().close();
-					Create_Window create_window;
+					Create_Window create_window(idUser);
 					create_window.Start();
 				}
 				else if (rectangle_user.getGlobalBounds().contains(this->window.getWindows().mapPixelToCoords(sf::Mouse::getPosition(this->window.getWindows()))))
