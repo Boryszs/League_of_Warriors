@@ -5,6 +5,7 @@
 #include "Fight.h"
 #include "DBcontroler.h"
 
+//
 class RestaurantFight_Window : public Window_Base
 {
 public:
