@@ -201,7 +201,7 @@ void DBcontroler::addChampion(Champion* champ,int class_hero ,int idUser)
 
 	}
 }
-
+//
 void DBcontroler::deleteHeroes(int idUser, int idChampion)
 {
 	string qerry = "DELETE FROM heroes WHERE Users_idUsers="+to_string(idUser) +" and "+"idHeroes="+ to_string(idChampion) +";";
