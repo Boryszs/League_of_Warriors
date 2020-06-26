@@ -5,6 +5,7 @@
 #include <thread>
 #include "Restaurant_Window.h"
 
+//
 RestaurantFight_Window::RestaurantFight_Window(Champion* champ, Champion* opon, int id) : window("Restaurant", 950, 950, "Image/mapUi_res.png"), fight(champ->clone(), opon->clone()), dbc()
 {
     champion = champ;
