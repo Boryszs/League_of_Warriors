@@ -5,10 +5,11 @@
 #include <thread>
 #include "Restaurant_Window.h"
 
-RestaurantFight_Window::RestaurantFight_Window(Champion* champ, Champion* opon) : window("Restaurant", 950, 950, "Image/mapUi_res.png"), fight(champ->clone(), opon->clone()), dbc()
+RestaurantFight_Window::RestaurantFight_Window(Champion* champ, Champion* opon, int id) : window("Restaurant", 950, 950, "Image/mapUi_res.png"), fight(champ->clone(), opon->clone()), dbc()
 {
     champion = champ;
     oponnent = opon;
+    idUser = id;
 }
 
 RestaurantFight_Window::~RestaurantFight_Window()
@@ -59,7 +60,7 @@ void RestaurantFight_Window::Start()
             window.getWindows().display();
             sleep(milliseconds(5000));
             window.getWindows().close();
-            Restaurant_Window aren_window(champion);
+            Restaurant_Window aren_window(champion, idUser);
             aren_window.Start();
         }
         if (std::stoi(fight.getChamp1()) <= 0 && std::stoi(fight.getChamp2()) >= 0)
@@ -77,7 +78,7 @@ void RestaurantFight_Window::Start()
             window.getWindows().display();
             sleep(milliseconds(5000));
             window.getWindows().close();
-            Restaurant_Window aren_window(champion);
+            Restaurant_Window aren_window(champion, idUser);
             aren_window.Start();
         }
         if (std::stoi(fight.getChamp1()) <= 0 && std::stoi(fight.getChamp2()) <= 0)
@@ -94,7 +95,7 @@ void RestaurantFight_Window::Start()
             window.getWindows().display();
             sleep(milliseconds(5000));
             window.getWindows().close();
-            Restaurant_Window aren_window(champion);
+            Restaurant_Window aren_window(champion, idUser);
             aren_window.Start();
         }
 
@@ -103,9 +104,10 @@ void RestaurantFight_Window::Start()
         {
             if (event.type == sf::Event::Closed)
             {
+                thread_fight.terminate();
                 sleep(milliseconds(700));
                 window.getWindows().close();
-                Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion);
+                Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion, idUser);
                 map_windows.setPosition_figure(840, 660);
                 map_windows.Start();
             }
@@ -114,9 +116,10 @@ void RestaurantFight_Window::Start()
 
         if (Keyboard::isKeyPressed(Keyboard::Escape))
         {
+            thread_fight.terminate();
             sleep(milliseconds(700));
             window.getWindows().close();
-            Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion);
+            Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion, idUser);
             map_windows.setPosition_figure(840, 660);
             map_windows.Start();
         }

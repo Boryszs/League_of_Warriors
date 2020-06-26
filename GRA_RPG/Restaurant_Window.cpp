@@ -4,8 +4,7 @@
 #include "DBcontroler.h"
 #include "RestaurantFight_Window.h"
 
-Restaurant_Window::Restaurant_Window(Champion* champ,int idUse) :window("Restaurant", 950, 950, "Image/mapUi_res.png")
-Restaurant_Window::Restaurant_Window(Champion* champ) :window("Restaurant", 950, 950, "Image/mapUi_res.png"), dbcontroler()
+Restaurant_Window::Restaurant_Window(Champion* champ,int idUse) :window("Restaurant", 950, 950, "Image/mapUi_res.png"), dbcontroler()
 {
 	champion = champ;
 	arial.loadFromFile("Fonts/Arial.ttf");
@@ -58,7 +57,7 @@ Restaurant_Window::Restaurant_Window(Champion* champ) :window("Restaurant", 950,
 			}
 		}
 	idUser = idUse;
-}
+
 
 
 		int count = 0;
@@ -114,11 +113,8 @@ void Restaurant_Window::Start()
 					{
 						window.getWindows().close();
 						std::string tt = Text_Data[choose][3].getString();
-						cout << "\n\n" << std::atoi(tt.c_str()) << "\n\n" << endl;
 						Champion* oponnent = dbcontroler.getChampion(std::atoi(tt.c_str()));
-						cout << *oponnent << endl;
-
-						RestaurantFight_Window arenFight_window(champion, oponnent);
+						RestaurantFight_Window arenFight_window(champion, oponnent, idUser);
 						arenFight_window.Start();
 					}
 				}
