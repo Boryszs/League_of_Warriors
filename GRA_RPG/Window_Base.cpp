@@ -2,6 +2,7 @@
 #include "ThrowLoad.cpp"
 #include <SFML/Graphics.hpp>
 #include<string>
+
 using namespace std;
 using namespace sf;
 

@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 #include "Champion.h"
+#include "DBcontroler.h"
 
 using namespace std;
 using namespace sf;
@@ -15,9 +16,13 @@ class Menu: public Window_Base
 private:
 	Champion* champion;
 public:
+
+	Sprite backroundTable;
+	Texture backgroundTab;
+
 	//constructor
 	Menu();
-	Menu(String,int,int,String, Champion* champ);
+	Menu(String,int,int,String);
 	//destructor
 	~Menu();
 	//function start showing 
@@ -35,7 +40,17 @@ public:
 	//object buttton to create and show button
 	Button buttonStart;
 	Button buttonExit;
-	
+	DBcontroler dbcontroler;
+	MYSQL_RES* res;
+	MYSQL_ROW row;
+
+	Font arial;
+	Text **Text_Data;
+
+	int choose;
+	int size;
+	RectangleShape *rectangle_choose;
+	RectangleShape add_b;
 };
 
 

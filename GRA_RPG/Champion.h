@@ -41,6 +41,7 @@ public:
 	void addDefence(int def) { defence += def; }
 	void addLuck(int luc) { luck += luc; }
 	void addMoney(int mon) { money += mon; }
+	void addExperience(int exp);
 	
 	int getId()
 	{

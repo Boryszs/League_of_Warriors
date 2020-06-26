@@ -70,8 +70,7 @@ void Map_Windows::setPosition_figure(int x,int y)
 
 
 void Map_Windows::Start()
-{
-	
+{	
 	viewItem_figure.getImage().setTextureRect(rectSourceSprite);
 	while (window.getWindows().isOpen())
 	{
@@ -81,6 +80,8 @@ void Map_Windows::Start()
 		{
 			if (event.type == sf::Event::Closed)
 			{
+				dbcontroler.updateChampion(champion);
+				sleep(milliseconds(700));
 				window.getWindows().close();
 			}
 		}
@@ -118,7 +119,7 @@ void Map_Windows::Start()
 						}
 						else
 						{
-							viewItem_figure.getImage().move(0, 35);
+							viewItem_figure.getImage().move(0, 12);
 						}
 					}
 				}
@@ -150,7 +151,7 @@ void Map_Windows::Start()
 						}
 						else
 						{
-							viewItem_figure.getImage().move(-35, 0);
+							viewItem_figure.getImage().move(-12, 0);
 						}
 					}
 				
@@ -183,7 +184,7 @@ void Map_Windows::Start()
 						}
 						else
 						{
-							viewItem_figure.getImage().move(35,0);
+							viewItem_figure.getImage().move(12,0);
 						}
 					}
 				}
@@ -215,7 +216,7 @@ void Map_Windows::Start()
 						}
 						else
 						{
-							viewItem_figure.getImage().move(0,-35);
+							viewItem_figure.getImage().move(0,-12);
 						}
 					}
 				}
@@ -227,7 +228,7 @@ void Map_Windows::Start()
 				sleep(milliseconds(700));
 				
 				window.getWindows().close();
-				Menu menu("Game", 800, 600, "Image/background.png",champion);
+				Menu menu("Game", 800, 600, "Image/background.png");
 				menu.Start();
 			}
 			else if (Keyboard::isKeyPressed(Keyboard::Enter))
