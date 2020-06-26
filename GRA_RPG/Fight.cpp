@@ -9,7 +9,7 @@ std::ostream& operator<<(std::ostream& out, const Fight& p)
     return out;
 }
 
-void Fight::heal(Champion* champ)
+void Fight::heal(const Champion* const champ)
 {
     if (flag_use_skil == false)
     {

@@ -28,6 +28,13 @@ void Champion::addExperience(int exp)
 		
 }
 
+void Champion::takeMoney(double mon)
+{
+	money -= mon;
+	if (money < 0)
+		money = 0.0;
+}
+
 std::ostream& operator<<(std::ostream& out, const Champion& p)
 {
 	out << "id[ " << p.id_champion << " ]\nNazwaPostaci[ " << p.name << " ]\nPoziom[ " << p.level << " ]\n" <<

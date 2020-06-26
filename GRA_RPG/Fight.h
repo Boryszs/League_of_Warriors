@@ -3,11 +3,8 @@
 #include "Champion.h"
 #include "string"
 
-
-//kom
 using namespace std;
 
-//ghgh
 class Fight
 {
 	Champion* champ1{ nullptr };
@@ -27,7 +24,7 @@ public:
 		delete champ2;
 	}
 
-	void heal(Champion* champ);
+	void heal(const Champion* const champ);
 
 	void startFigft();
 
