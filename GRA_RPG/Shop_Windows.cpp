@@ -154,7 +154,7 @@ void Shop_Windows::Start()
 					if (moneycheck(champion->getMoney()))
 					{
 						champion->addMoney(-5);
-						champion->addMoney(1);
+						champion->addLuck(1);
 					}
 				}
 			}

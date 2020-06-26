@@ -116,7 +116,7 @@ void Create_Window::Start()
 					password.resize(password.size() - 1);
 				}
 			}
-
+		}
 			//set string to text to show in window
 			Login.setString(login);
 			Password.setString(password);
@@ -131,7 +131,7 @@ void Create_Window::Start()
 			window.getWindows().draw(Login);
 			window.getWindows().draw(Password);
 			window.getWindows().display();
-		}
+		
 
 	}
 }

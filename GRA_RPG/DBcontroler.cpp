@@ -3,6 +3,7 @@
 #include "Warrior.h"
 #include "Archer.h"
 #include "Wizzard.h"
+#include "ThrowLoad.cpp"
 
 using namespace std;
 
@@ -10,6 +11,10 @@ DBcontroler::DBcontroler()
 {
 	conn = mysql_init(0);
 	conn = mysql_real_connect(conn, "localhost", "root", "", "gamerpg", 3306, NULL, 0);
+	if (!conn)
+	{
+		throw MyException("No database connect!!!");
+	}
 }
 
 bool DBcontroler::checkUser(int id)
@@ -250,4 +255,3 @@ void DBcontroler::deleteHeroe(int idChamp)
 
 	}
 }
-//DELETE FROM `heroes` WHERE `Users_idUsers` and `idHeroes`

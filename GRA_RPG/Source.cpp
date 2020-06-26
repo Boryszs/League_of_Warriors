@@ -6,12 +6,13 @@
 #include "Window_Base.h"
 #include "ErrorShow_Window.h"
 
+
 int main()
 {
+	FreeConsole();
 	try
 	{
 		
-
 		Login_Window login_window;
 		login_window.Start();
 	

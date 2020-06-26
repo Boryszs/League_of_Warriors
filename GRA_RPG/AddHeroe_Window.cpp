@@ -69,8 +69,8 @@ void AddHeroe_Window::Start()
 				{
 					//after click create button
 					window.getWindows().close();
-					sleep(milliseconds(700));	
-					Champion* champ=nullptr;
+					sleep(milliseconds(700));
+					Champion* champ = nullptr;
 					cout << idUser;
 					if (choose == 0)
 						champ = new Archer(0, name, 1, 1, 10.0, 100, 1, 10, 1, 10, 1);
@@ -78,8 +78,8 @@ void AddHeroe_Window::Start()
 						champ = new Warrior(0, name, 1, 1, 10.0, 100, 10, 1, 1, 10, 1);
 					else if (choose == 2)
 						champ = new Wizzard(0, name, 1, 1, 10.0, 100, 1, 1, 10, 10, 1);
-					dbcontroler.addChampion(champ,choose+1,idUser);
-					Menu menu("Game", 800, 600, "Image/background.png",idUser);
+					dbcontroler.addChampion(champ, choose + 1, idUser);
+					Menu menu("Game", 800, 600, "Image/background.png", idUser);
 					menu.Start();
 				}
 				else if (rectangle_name.getGlobalBounds().contains(this->window.getWindows().mapPixelToCoords(sf::Mouse::getPosition(this->window.getWindows()))))
@@ -93,7 +93,7 @@ void AddHeroe_Window::Start()
 
 				for (int i = 0; i < 3; i++)
 				{
-					if (choose != -1 && flaga!=1)
+					if (choose != -1 && flaga != 1)
 					{
 						rectangle_choose[choose].setFillColor(Color::White);
 					}
@@ -132,7 +132,7 @@ void AddHeroe_Window::Start()
 					name.resize(name.size() - 1);
 				}
 			}
-
+		}
 			//set string to text to show in window
 			Name.setString(name);
 
@@ -148,7 +148,7 @@ void AddHeroe_Window::Start()
 				window.getWindows().draw(rectangle_choose[i]);
 			}
 			window.getWindows().display();
-		}
+		
 
 	}
 }
