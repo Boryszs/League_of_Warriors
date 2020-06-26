@@ -4,8 +4,9 @@
 #include <iostream>
 using namespace std;
 using namespace  sf;
-Create_Window::Create_Window() :window("Login", 273, 311, "Image/create_w.png")
+Create_Window::Create_Window(int idUse) :window("Login", 273, 311, "Image/create_w.png"),dbcontroler()
 {
+	idUser = idUse;
 	//load arial fonts
 	arial.loadFromFile("Fonts/Arial.ttf");
 
@@ -64,11 +65,15 @@ void Create_Window::Start()
 			{
 				if (rectangle_create.getGlobalBounds().contains(this->window.getWindows().mapPixelToCoords(sf::Mouse::getPosition(this->window.getWindows()))))
 				{
-				//after click create button
-					window.getWindows().close();
-					sleep(milliseconds(700));
-					Login_Window login_window;
-					login_window.Start();
+					if (login.size() > 0 && password.size() > 0)
+					{
+						//after click create button
+						window.getWindows().close();
+						sleep(milliseconds(700));
+						dbcontroler.addUser(login, password);
+						Login_Window login_window;
+						login_window.Start();
+					}
 				}
 				else if (rectangle_user.getGlobalBounds().contains(this->window.getWindows().mapPixelToCoords(sf::Mouse::getPosition(this->window.getWindows()))))
 				{

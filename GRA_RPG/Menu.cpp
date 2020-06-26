@@ -16,10 +16,11 @@ Menu::Menu()
 	//this->shape.setRadius(100);
 }
 
-Menu::Menu(String title,int width,int height,String backroundPath):buttonStart(),buttonExit(),window(title,width,height,backroundPath),dbcontroler()
+Menu::Menu(String title,int width,int height,String backroundPath,int idUse):buttonStart(),buttonExit(),window(title,width,height,backroundPath),dbcontroler()
 {
 	//window.create(sf::VideoMode(width, height), title);
 	//this->shape.setRadius(100);
+	idUser = idUse;
 	arial.loadFromFile("Fonts/Arial.ttf");
 
 	this->width = width;
@@ -30,8 +31,13 @@ Menu::Menu(String title,int width,int height,String backroundPath):buttonStart()
 	buttonExit.setButton("Zakoncz", 200, 50, Color::Black, 300, 350,350, 360);
 	//champion = champ;
 	add_b.setSize(sf::Vector2f(100, 25));
-	add_b.setPosition(348, 208);
-	add_b.setFillColor(Color::Cyan);
+	add_b.setPosition(225, 208);
+	//add_b.setFillColor(Color::Cyan);
+
+	delete_b.setSize(sf::Vector2f(117, 25));
+	delete_b.setPosition(483, 208);
+	//delete_b.setFillColor(Color::Cyan);
+
 
 	if (!backgroundTab.loadFromFile("Image/tabela.png"))
 	{
@@ -40,7 +46,7 @@ Menu::Menu(String title,int width,int height,String backroundPath):buttonStart()
 	backroundTable.setTexture(backgroundTab);
 	backroundTable.setPosition(100,50);
 
-	res = dbcontroler.getChampions(1);
+	res = dbcontroler.getChampions(idUser);
 
 	size = res->row_count;
 	rectangle_choose = new RectangleShape[size];
@@ -97,7 +103,7 @@ Menu::Menu(String title,int width,int height,String backroundPath):buttonStart()
 				Text_Data[count][2].setString("Wizzard");
 			}
 			Text_Data[count][3].setString(row[1]);
-			cout << row[3] << " " << row[4] << " " << row[5] << endl;
+			//cout << row[3] << " " << row[4] << " " << row[5] << endl;
 			count++;
 		}
 		choose = -1;
@@ -122,7 +128,7 @@ void Menu::Start()
 						window.getWindows().close();
 						std::string tt = Text_Data[choose][3].getString();
 						champion = dbcontroler.getChampion(std::atoi(tt.c_str()));
-						Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion);
+						Map_Windows map_windows("Gra", 950, 950, "Image/mapo.png", champion,idUser);
 						map_windows.Start();
 					}
 				}
@@ -134,10 +140,28 @@ void Menu::Start()
 
 				if (add_b.getGlobalBounds().contains(this->window.getWindows().mapPixelToCoords(sf::Mouse::getPosition(this->window.getWindows()))))
 				{
-					window.getWindows().close();
-					AddHeroe_Window Add_windows;
-					Add_windows.Start();
+					if (size != 3)
+					{
+						window.getWindows().close();
+						AddHeroe_Window Add_windows(idUser);
+						Add_windows.Start();
+
+					}
 				}
+
+				if (delete_b.getGlobalBounds().contains(this->window.getWindows().mapPixelToCoords(sf::Mouse::getPosition(this->window.getWindows()))))
+				{
+					if (choose != -1)
+					{
+						std::string id_H = Text_Data[choose][3].getString();
+						//cout << id_H;
+						dbcontroler.deleteHeroes(idUser,atoi(id_H.c_str()));
+						window.getWindows().close();
+						Menu menu("Game", 800, 600, "Image/background.png", idUser);
+						menu.Start();
+					}
+				}
+
 
 				for (int i = 0; i < size; i++)
 				{
@@ -164,11 +188,13 @@ void Menu::Start()
 
 		window.getWindows().clear();
 		window.getWindows().draw(add_b);
+		window.getWindows().draw(delete_b);
 		window.getWindows().draw(backroundImage);
+		
 		window.getWindows().draw(buttonStart.getButton());
 		window.getWindows().draw(buttonStart.getText());
 		window.getWindows().draw(buttonExit.getButton());
-		
+	
 		window.getWindows().draw(buttonExit.getText());
 
 		for (int i = 0; i < size; i++)

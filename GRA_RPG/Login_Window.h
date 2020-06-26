@@ -11,7 +11,8 @@ class Login_Window
 	/*
 	Class support login.
 	*/
-
+	private:
+	int idUser;
 	public:
 	//Constructor
 	Login_Window();
@@ -28,6 +29,7 @@ class Login_Window
 	
 	string login;
 	string password;
+	
 
 	int flaga;
 	DBcontroler dbcontroler;

@@ -15,6 +15,7 @@ class Menu: public Window_Base
 {
 private:
 	Champion* champion;
+	int idUser;
 public:
 
 	Sprite backroundTable;
@@ -22,7 +23,7 @@ public:
 
 	//constructor
 	Menu();
-	Menu(String,int,int,String);
+	Menu(String,int,int,String,int idUser);
 	//destructor
 	~Menu();
 	//function start showing 
@@ -51,6 +52,7 @@ public:
 	int size;
 	RectangleShape *rectangle_choose;
 	RectangleShape add_b;
+	RectangleShape delete_b;
 };
 
 

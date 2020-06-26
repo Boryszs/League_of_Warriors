@@ -7,10 +7,12 @@ class Create_Window
 	/*
 	Class support create user.
 	*/
+private:
+	int idUser;
 
 public:
 	//Constructor
-	Create_Window();
+	Create_Window(int idUse);
 	//Deconstructor
 	~Create_Window();
 	//base window class use to create window
@@ -25,6 +27,8 @@ public:
 	string password;
 
 	int flaga;
+
+	DBcontroler dbcontroler;
 
 	RectangleShape rectangle_user;
 	RectangleShape rectangle_pass;

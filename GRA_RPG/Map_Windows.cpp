@@ -17,9 +17,31 @@ Map_Windows::Map_Windows():window()
 {
 
 }
-Map_Windows::Map_Windows(String title, int width, int height, String backroundPath, Champion* champ): dbcontroler(),rectSourceSprite(47, 0, 47, 75),window(title,width,height,backroundPath), viewItem_key_shop("Image/klucz.png",860,230), viewItem_figure("Image/postac.png",400,100), viewItem_key_arena("Image/klucz.png", 75, 820), viewItem_key_rest("Image/klucz.png", 840, 660)
+Map_Windows::Map_Windows(String title, int width, int height, String backroundPath, Champion* champ,int idUse): viewItem_figure(),dbcontroler(),rectSourceSprite(47, 0, 47, 75),window(title,width,height,backroundPath), viewItem_key_shop("Image/klucz.png",860,230), viewItem_key_arena("Image/klucz.png", 75, 820), viewItem_key_rest("Image/klucz.png", 840, 660)
 {
+
+
+	if (dbcontroler.getProf(champ->getId())!=nullptr) 
+	{
+		MYSQL_ROW row;
+		row = dbcontroler.getProf(champ->getId());
+		cout << row[0];
+		if (atoi(row[0]) == 1)
+		{
+			viewItem_figure.set_Image("Image/postac.png", 400, 100);
+
+		}
+		else if (atoi(row[0]) == 2)
+		{
+			viewItem_figure.set_Image("Image/postac2.png", 400, 100);
+		}
+		else if (atoi(row[0]) == 3)
+		{
+			viewItem_figure.set_Image("Image/postac3.png", 400, 100);
+		}
+	}
 	//window.create(sf::VideoMode(800, 600), "Window");
+	idUser = idUse;
 	champion = champ;
 	col_l_u_1.setSize(sf::Vector2f(280, 230));
 	col_l_u_1.setPosition(0, 0);
@@ -228,7 +250,7 @@ void Map_Windows::Start()
 				sleep(milliseconds(700));
 				
 				window.getWindows().close();
-				Menu menu("Game", 800, 600, "Image/background.png");
+				Menu menu("Game", 800, 600, "Image/background.png",idUser);
 				menu.Start();
 			}
 			else if (Keyboard::isKeyPressed(Keyboard::Enter))
@@ -238,19 +260,19 @@ void Map_Windows::Start()
 				if (viewItem_figure.getImage().getGlobalBounds().intersects(viewItem_key_shop.getImage().getGlobalBounds()))
 				{
 					window.getWindows().close();
-					Shop_Windows aren_window(champion);
+					Shop_Windows aren_window(champion,idUser);
 					aren_window.Start();
 				}
 				else if (viewItem_figure.getImage().getGlobalBounds().intersects(viewItem_key_arena.getImage().getGlobalBounds()))
 				{
 					window.getWindows().close();
-					Arena_Window aren_window(champion);
+					Arena_Window aren_window(champion,idUser);
 					aren_window.Start();
 				}
 				else if (viewItem_figure.getImage().getGlobalBounds().intersects(viewItem_key_rest.getImage().getGlobalBounds()))
 				{
 					window.getWindows().close();
-					Restaurant_Window aren_window(champion);
+					Restaurant_Window aren_window(champion, idUser);
 					aren_window.Start();
 				}
 			}
@@ -271,7 +293,6 @@ void Map_Windows::Start()
 				window.getWindows().draw(viewItem_key_arena.getImage());
 
 				window.getWindows().draw(viewItem_figure.getImage());
-			
 				window.getWindows().display();
 	}
 }
