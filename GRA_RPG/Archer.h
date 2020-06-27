@@ -1,6 +1,6 @@
 #pragma once
 #include "Champion.h"
-
+//
 ///Class Archer Inherits a champion.
 class Archer : public Champion {
 public:
