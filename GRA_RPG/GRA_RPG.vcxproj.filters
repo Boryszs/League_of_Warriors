@@ -131,9 +131,6 @@
     <ClInclude Include="ErrorShow_Window.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="Nagłówek.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
     <ClInclude Include="Fight.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>

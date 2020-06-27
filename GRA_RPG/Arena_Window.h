@@ -3,20 +3,28 @@
 #include "View_Item.h"
 #include "Champion.h"
 
+/// Class arena to representation graphic Window object Arena
 class Arena_Window : public Window_Base
 {
-/*
-Class arena to representation graphic Window object Arena
-*/
-
 public:
-	//constructor
+	/// Constructor Arena_Window
+	/// <param name="Champ"> - Object type Champion </param>
+	/// <param name="idUse"> - Parameter type int to storage id User </param>
 	Arena_Window(Champion* champ,int idUse);
-	//destructor
+
+	/// Destructor Class Arena_Windows
 	~Arena_Window();
-	//function start showing 
+
+	/// Function Start to show graphic interface
 	void Start();
+
+	/// Function return object type RectangleShape to show some graphics
+	/// <param name="Champ"> - Object type Champion </param>
+	/// <param name="idUse"> - Parameter type int to storage id User </param>
+	/// <returns>Object type RectangleShape</returns>
 	RectangleShape getClickHeal() { return click_heal; }
+
+	/// Function use to random monsters.
 	void randMonster();
 private:
 	int idUser;

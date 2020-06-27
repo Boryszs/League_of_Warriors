@@ -1,0 +1,153 @@
+\hypertarget{class_fight}{}\doxysection{Fight Class Reference}
+\label{class_fight}\index{Fight@{Fight}}
+
+
+Class support fighting between player vs monster or player vs player.  
+
+
+
+
+{\ttfamily \#include $<$Fight.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fight_ab14dfc194831e91157874650b4fdb184}{Fight}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor class \mbox{\hyperlink{class_fight}{Fight}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_fight_a698531ace55fe934c640a710627308cd}{Fight}} (\mbox{\hyperlink{class_champion}{Champion}} $\ast$c1, \mbox{\hyperlink{class_champion}{Champion}} $\ast$c2)
+\begin{DoxyCompactList}\small\item\em Constructor Class \mbox{\hyperlink{class_fight}{Fight}} 
+\begin{DoxyParams}{Parameters}
+{\em c1} & -\/ pointer to first character\\
+\hline
+{\em c2} & -\/ pointer of second character\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_fight_a18cf7a66723c83b0406cf87a1d566e5c}{$\sim$\+Fight}} ()
+\begin{DoxyCompactList}\small\item\em Destructor class \mbox{\hyperlink{class_fight}{Fight}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fight_ae6f5a08973aef39ac834985ba0de8f7c}{heal}} (const \mbox{\hyperlink{class_champion}{Champion}} $\ast$const champ)
+\begin{DoxyCompactList}\small\item\em Function set health. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fight_acf0fbd088fa6e4477b5319988a47b4a2}{start\+Figft}} ()
+\begin{DoxyCompactList}\small\item\em Function starts fight between characters. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_fight_afc9978fcbe5e110939c832447ad9b243}{get\+Champ1}} ()
+\begin{DoxyCompactList}\small\item\em Get health from first character. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_fight_ac2a51a89f449ca5d5cd89f8215edf22f}{get\+Champ2}} ()
+\begin{DoxyCompactList}\small\item\em Get health from second character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_fight_a357524757cf99fc892b2f8377bcf9ee1}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{class_fight}{Fight}} \&p)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class support fighting between player vs monster or player vs player. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_fight_ab14dfc194831e91157874650b4fdb184}\label{class_fight_ab14dfc194831e91157874650b4fdb184}} 
+\index{Fight@{Fight}!Fight@{Fight}}
+\index{Fight@{Fight}!Fight@{Fight}}
+\doxysubsubsection{\texorpdfstring{Fight()}{Fight()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Fight\+::\+Fight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor class \mbox{\hyperlink{class_fight}{Fight}}. 
+
+\mbox{\Hypertarget{class_fight_a698531ace55fe934c640a710627308cd}\label{class_fight_a698531ace55fe934c640a710627308cd}} 
+\index{Fight@{Fight}!Fight@{Fight}}
+\index{Fight@{Fight}!Fight@{Fight}}
+\doxysubsubsection{\texorpdfstring{Fight()}{Fight()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Fight\+::\+Fight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_champion}{Champion}} $\ast$}]{c1,  }\item[{\mbox{\hyperlink{class_champion}{Champion}} $\ast$}]{c2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor Class \mbox{\hyperlink{class_fight}{Fight}} 
+\begin{DoxyParams}{Parameters}
+{\em c1} & -\/ pointer to first character\\
+\hline
+{\em c2} & -\/ pointer of second character\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\mbox{\Hypertarget{class_fight_a18cf7a66723c83b0406cf87a1d566e5c}\label{class_fight_a18cf7a66723c83b0406cf87a1d566e5c}} 
+\index{Fight@{Fight}!````~Fight@{$\sim$Fight}}
+\index{````~Fight@{$\sim$Fight}!Fight@{Fight}}
+\doxysubsubsection{\texorpdfstring{$\sim$Fight()}{~Fight()}}
+{\footnotesize\ttfamily Fight\+::$\sim$\+Fight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor class \mbox{\hyperlink{class_fight}{Fight}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_fight_afc9978fcbe5e110939c832447ad9b243}\label{class_fight_afc9978fcbe5e110939c832447ad9b243}} 
+\index{Fight@{Fight}!getChamp1@{getChamp1}}
+\index{getChamp1@{getChamp1}!Fight@{Fight}}
+\doxysubsubsection{\texorpdfstring{getChamp1()}{getChamp1()}}
+{\footnotesize\ttfamily string Fight\+::get\+Champ1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get health from first character. 
+
+\begin{DoxyReturn}{Returns}
+Health as String
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fight_ac2a51a89f449ca5d5cd89f8215edf22f}\label{class_fight_ac2a51a89f449ca5d5cd89f8215edf22f}} 
+\index{Fight@{Fight}!getChamp2@{getChamp2}}
+\index{getChamp2@{getChamp2}!Fight@{Fight}}
+\doxysubsubsection{\texorpdfstring{getChamp2()}{getChamp2()}}
+{\footnotesize\ttfamily string Fight\+::get\+Champ2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get health from second character. 
+
+\begin{DoxyReturn}{Returns}
+Health as String
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fight_ae6f5a08973aef39ac834985ba0de8f7c}\label{class_fight_ae6f5a08973aef39ac834985ba0de8f7c}} 
+\index{Fight@{Fight}!heal@{heal}}
+\index{heal@{heal}!Fight@{Fight}}
+\doxysubsubsection{\texorpdfstring{heal()}{heal()}}
+{\footnotesize\ttfamily void Fight\+::heal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_champion}{Champion}} $\ast$const}]{champ }\end{DoxyParamCaption})}
+
+
+
+Function set health. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em champ} & -\/ Basic helth champion\\
+\hline
+\end{DoxyParams}
+~\newline
+ \mbox{\Hypertarget{class_fight_acf0fbd088fa6e4477b5319988a47b4a2}\label{class_fight_acf0fbd088fa6e4477b5319988a47b4a2}} 
+\index{Fight@{Fight}!startFigft@{startFigft}}
+\index{startFigft@{startFigft}!Fight@{Fight}}
+\doxysubsubsection{\texorpdfstring{startFigft()}{startFigft()}}
+{\footnotesize\ttfamily void Fight\+::start\+Figft (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function starts fight between characters. 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_fight_a357524757cf99fc892b2f8377bcf9ee1}\label{class_fight_a357524757cf99fc892b2f8377bcf9ee1}} 
+\index{Fight@{Fight}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Fight@{Fight}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_fight}{Fight}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+

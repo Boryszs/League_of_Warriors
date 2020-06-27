@@ -1,0 +1,105 @@
+\hypertarget{class_wizzard}{}\doxysection{Wizzard Class Reference}
+\label{class_wizzard}\index{Wizzard@{Wizzard}}
+
+
+Class \mbox{\hyperlink{class_wizzard}{Wizzard}} Inherits a champion.  
+
+
+
+
+{\ttfamily \#include $<$Wizzard.\+h$>$}
+
+Inheritance diagram for Wizzard\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_wizzard}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_wizzard_abff43a8c3055184d17346cd4d61f59ae}{Wizzard}} (const unsigned id, const std\+::string n, unsigned int l, unsigned int e, double m, int he, int st, int de, int ma, int def, int lu)
+\begin{DoxyCompactList}\small\item\em Constructor \mbox{\hyperlink{class_archer}{Archer}} cause a champion constructor. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_wizzard_a39ed40468d31771f13aac8e4ef6b2175}{attack}} () override
+\begin{DoxyCompactList}\small\item\em Virtual function attack. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_wizzard}{Wizzard}} $\ast$ \mbox{\hyperlink{class_wizzard_aef4702eb219356c8b9ce4de9648e5762}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Virtual function clone to clone object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class \mbox{\hyperlink{class_wizzard}{Wizzard}} Inherits a champion. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_wizzard_abff43a8c3055184d17346cd4d61f59ae}\label{class_wizzard_abff43a8c3055184d17346cd4d61f59ae}} 
+\index{Wizzard@{Wizzard}!Wizzard@{Wizzard}}
+\index{Wizzard@{Wizzard}!Wizzard@{Wizzard}}
+\doxysubsubsection{\texorpdfstring{Wizzard()}{Wizzard()}}
+{\footnotesize\ttfamily Wizzard\+::\+Wizzard (\begin{DoxyParamCaption}\item[{const unsigned}]{id,  }\item[{const std\+::string}]{n,  }\item[{unsigned int}]{l,  }\item[{unsigned int}]{e,  }\item[{double}]{m,  }\item[{int}]{he,  }\item[{int}]{st,  }\item[{int}]{de,  }\item[{int}]{ma,  }\item[{int}]{def,  }\item[{int}]{lu }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor \mbox{\hyperlink{class_archer}{Archer}} cause a champion constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ Id champion in database\\
+\hline
+{\em n} & -\/ Name champion\\
+\hline
+{\em l} & -\/ Level champion\\
+\hline
+{\em e} & -\/ Experience champion \\
+\hline
+{\em m} & -\/ Money champion \\
+\hline
+{\em he} & -\/ Health champion \\
+\hline
+{\em st} & -\/ Strength champion \\
+\hline
+{\em de} & -\/ Dexerity \mbox{\hyperlink{class_champion}{Champion}}\\
+\hline
+{\em ma} & -\/ Magic champion \\
+\hline
+{\em def} & -\/ Defence champion \\
+\hline
+{\em lu} & -\/ Lucky champion \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_wizzard_a39ed40468d31771f13aac8e4ef6b2175}\label{class_wizzard_a39ed40468d31771f13aac8e4ef6b2175}} 
+\index{Wizzard@{Wizzard}!attack@{attack}}
+\index{attack@{attack}!Wizzard@{Wizzard}}
+\doxysubsubsection{\texorpdfstring{attack()}{attack()}}
+{\footnotesize\ttfamily int Wizzard\+::attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function attack. 
+
+\begin{DoxyReturn}{Returns}
+value attack 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_champion_a8c18031647767c21f9404fb2b9a4f50a}{Champion}}.
+
+\mbox{\Hypertarget{class_wizzard_aef4702eb219356c8b9ce4de9648e5762}\label{class_wizzard_aef4702eb219356c8b9ce4de9648e5762}} 
+\index{Wizzard@{Wizzard}!clone@{clone}}
+\index{clone@{clone}!Wizzard@{Wizzard}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_wizzard}{Wizzard}}$\ast$ Wizzard\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function clone to clone object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer object \mbox{\hyperlink{class_archer}{Archer}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_champion_ac7bc575fe47cedac1aaecd109404254c}{Champion}}.
+

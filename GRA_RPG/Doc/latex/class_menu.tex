@@ -1,0 +1,337 @@
+\hypertarget{class_menu}{}\doxysection{Menu Class Reference}
+\label{class_menu}\index{Menu@{Menu}}
+
+
+Class \mbox{\hyperlink{class_menu}{Menu}} represent window \mbox{\hyperlink{class_menu}{Menu}} inherit \mbox{\hyperlink{class_window___base}{Window\+\_\+\+Base}}.  
+
+
+
+
+{\ttfamily \#include $<$Menu.\+h$>$}
+
+Inheritance diagram for Menu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_menu}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_menu_ad466dd83355124a6ed958430450bfe94}{Menu}} ()
+\begin{DoxyCompactList}\small\item\em Defalut Constructor \mbox{\hyperlink{class_menu}{Menu}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_menu_a4e275076eee049b51aae02572dbb786f}{Menu}} (String, int, int, String, int id\+User)
+\begin{DoxyCompactList}\small\item\em Constructor \mbox{\hyperlink{class_menu}{Menu}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_menu_a831387f51358cfb88cd018e1777bc980}{$\sim$\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Destructor \mbox{\hyperlink{class_menu}{Menu}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_af24259cfce6f1beeb1e547735c3126be}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Function start showing a graphic interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Sprite \mbox{\hyperlink{class_menu_a8af19c39765ba16d347c590932cce9fa}{backround\+Table}}
+\begin{DoxyCompactList}\small\item\em Object Sprite use to show table. \end{DoxyCompactList}\item 
+Texture \mbox{\hyperlink{class_menu_aea620e3d475dd9a1b97fd7d3a748784a}{background\+Tab}}
+\begin{DoxyCompactList}\small\item\em Object Texture use to load image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_window___base}{Window\+\_\+\+Base}} \mbox{\hyperlink{class_menu_af956ca99e1df479a90534416825e5940}{window}}
+\begin{DoxyCompactList}\small\item\em Object a base window class use to create window. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_menu_a0edddfda0319fc24d00ca6ed610ea59b}{title}}
+\begin{DoxyCompactList}\small\item\em Values use to keep name widow. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_menu_a30ec519ffccb75388150c64175c4959b}{width}}
+\begin{DoxyCompactList}\small\item\em Width windows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_menu_abfd154ce7b19dca62d1ce8483c6f7bba}{height}}
+\begin{DoxyCompactList}\small\item\em Height window. \end{DoxyCompactList}\item 
+Texture \mbox{\hyperlink{class_menu_ac77893288030f5f17f711db1500987d3}{background}}
+\begin{DoxyCompactList}\small\item\em Texture use to load backround image. \end{DoxyCompactList}\item 
+Sprite \mbox{\hyperlink{class_menu_ad6c7da071ec12c9532ea1cd4b88b77ed}{backround\+Image}}
+\begin{DoxyCompactList}\small\item\em Sprite use to showing a background. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_button}{Button}} \mbox{\hyperlink{class_menu_a73244ff67da57a1779a4df885deab569}{button\+Start}}
+\begin{DoxyCompactList}\small\item\em Object buttton to create and show button. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_button}{Button}} \mbox{\hyperlink{class_menu_aebe58c2990f73850b744a2d54db9292c}{button\+Exit}}
+\begin{DoxyCompactList}\small\item\em Object buttton to create and show button. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_d_bcontroler}{D\+Bcontroler}} \mbox{\hyperlink{class_menu_a2ae18d26ab593cd9a635df5b819a3d72}{dbcontroler}}
+\begin{DoxyCompactList}\small\item\em Object class D\+B\+Controller use to connect a database. \end{DoxyCompactList}\item 
+M\+Y\+S\+Q\+L\+\_\+\+R\+ES $\ast$ \mbox{\hyperlink{class_menu_a6a741a6867991754e3cc531443f4f11e}{res}}
+\begin{DoxyCompactList}\small\item\em Object use to hold a database get value. \end{DoxyCompactList}\item 
+M\+Y\+S\+Q\+L\+\_\+\+R\+OW \mbox{\hyperlink{class_menu_aae24fb1cb3584ef79f8a7e743b3b69ec}{row}}
+\begin{DoxyCompactList}\small\item\em Object hold a row witch data get with database. \end{DoxyCompactList}\item 
+Font \mbox{\hyperlink{class_menu_a01f87502a82e3b7d2cc83da3a5ad3e36}{arial}}
+\begin{DoxyCompactList}\small\item\em Value Font to load a font. \end{DoxyCompactList}\item 
+Text $\ast$$\ast$ \mbox{\hyperlink{class_menu_ac76f2c4967789b0345ed4c21b63ae45b}{Text\+\_\+\+Data}}
+\begin{DoxyCompactList}\small\item\em Dynamic value Text to show a chammpion in table . \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_menu_ac3517a8bf4a721b720d79679a20dae6e}{choose}}
+\begin{DoxyCompactList}\small\item\em Value to hold a choose. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_menu_a4bac6997dc683096fc907e4e401fc7a5}{size}}
+\begin{DoxyCompactList}\small\item\em Value hold count a champion get a database. \end{DoxyCompactList}\item 
+Rectangle\+Shape $\ast$ \mbox{\hyperlink{class_menu_a8b15982b6de0357aa57b45206dc31866}{rectangle\+\_\+choose}}
+\begin{DoxyCompactList}\small\item\em Object use to check who row table is click. \end{DoxyCompactList}\item 
+Rectangle\+Shape \mbox{\hyperlink{class_menu_ab5c73bcb030338a7cd02e6dc4a876d41}{add\+\_\+b}}
+\begin{DoxyCompactList}\small\item\em Object use to check if button add is click. \end{DoxyCompactList}\item 
+Rectangle\+Shape \mbox{\hyperlink{class_menu_a19a28a7def0d5c7b43f2a2e97bca08b3}{delete\+\_\+b}}
+\begin{DoxyCompactList}\small\item\em Object use to check if button delete is click. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class \mbox{\hyperlink{class_menu}{Menu}} represent window \mbox{\hyperlink{class_menu}{Menu}} inherit \mbox{\hyperlink{class_window___base}{Window\+\_\+\+Base}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_menu_ad466dd83355124a6ed958430450bfe94}\label{class_menu_ad466dd83355124a6ed958430450bfe94}} 
+\index{Menu@{Menu}!Menu@{Menu}}
+\index{Menu@{Menu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{Menu()}{Menu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Menu\+::\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Defalut Constructor \mbox{\hyperlink{class_menu}{Menu}}. 
+
+\mbox{\Hypertarget{class_menu_a4e275076eee049b51aae02572dbb786f}\label{class_menu_a4e275076eee049b51aae02572dbb786f}} 
+\index{Menu@{Menu}!Menu@{Menu}}
+\index{Menu@{Menu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{Menu()}{Menu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Menu\+::\+Menu (\begin{DoxyParamCaption}\item[{String}]{title,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{String}]{backround\+Path,  }\item[{int}]{id\+User }\end{DoxyParamCaption})}
+
+
+
+Constructor \mbox{\hyperlink{class_menu}{Menu}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em String } & -\/ Title window \\
+\hline
+{\em int } & -\/ Wifth window \\
+\hline
+{\em int } & -\/ Height window \\
+\hline
+{\em String } & -\/ Path to backgrand image\\
+\hline
+{\em id\+User } & -\/ Value hold in User a database \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_menu_a831387f51358cfb88cd018e1777bc980}\label{class_menu_a831387f51358cfb88cd018e1777bc980}} 
+\index{Menu@{Menu}!````~Menu@{$\sim$Menu}}
+\index{````~Menu@{$\sim$Menu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{$\sim$Menu()}{~Menu()}}
+{\footnotesize\ttfamily Menu\+::$\sim$\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor \mbox{\hyperlink{class_menu}{Menu}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_menu_af24259cfce6f1beeb1e547735c3126be}\label{class_menu_af24259cfce6f1beeb1e547735c3126be}} 
+\index{Menu@{Menu}!Start@{Start}}
+\index{Start@{Start}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Menu\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function start showing a graphic interface. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_menu_ab5c73bcb030338a7cd02e6dc4a876d41}\label{class_menu_ab5c73bcb030338a7cd02e6dc4a876d41}} 
+\index{Menu@{Menu}!add\_b@{add\_b}}
+\index{add\_b@{add\_b}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{add\_b}{add\_b}}
+{\footnotesize\ttfamily Rectangle\+Shape Menu\+::add\+\_\+b}
+
+
+
+Object use to check if button add is click. 
+
+\mbox{\Hypertarget{class_menu_a01f87502a82e3b7d2cc83da3a5ad3e36}\label{class_menu_a01f87502a82e3b7d2cc83da3a5ad3e36}} 
+\index{Menu@{Menu}!arial@{arial}}
+\index{arial@{arial}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{arial}{arial}}
+{\footnotesize\ttfamily Font Menu\+::arial}
+
+
+
+Value Font to load a font. 
+
+\mbox{\Hypertarget{class_menu_ac77893288030f5f17f711db1500987d3}\label{class_menu_ac77893288030f5f17f711db1500987d3}} 
+\index{Menu@{Menu}!background@{background}}
+\index{background@{background}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{background}{background}}
+{\footnotesize\ttfamily Texture Menu\+::background}
+
+
+
+Texture use to load backround image. 
+
+\mbox{\Hypertarget{class_menu_aea620e3d475dd9a1b97fd7d3a748784a}\label{class_menu_aea620e3d475dd9a1b97fd7d3a748784a}} 
+\index{Menu@{Menu}!backgroundTab@{backgroundTab}}
+\index{backgroundTab@{backgroundTab}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{backgroundTab}{backgroundTab}}
+{\footnotesize\ttfamily Texture Menu\+::background\+Tab}
+
+
+
+Object Texture use to load image. 
+
+\mbox{\Hypertarget{class_menu_ad6c7da071ec12c9532ea1cd4b88b77ed}\label{class_menu_ad6c7da071ec12c9532ea1cd4b88b77ed}} 
+\index{Menu@{Menu}!backroundImage@{backroundImage}}
+\index{backroundImage@{backroundImage}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{backroundImage}{backroundImage}}
+{\footnotesize\ttfamily Sprite Menu\+::backround\+Image}
+
+
+
+Sprite use to showing a background. 
+
+\mbox{\Hypertarget{class_menu_a8af19c39765ba16d347c590932cce9fa}\label{class_menu_a8af19c39765ba16d347c590932cce9fa}} 
+\index{Menu@{Menu}!backroundTable@{backroundTable}}
+\index{backroundTable@{backroundTable}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{backroundTable}{backroundTable}}
+{\footnotesize\ttfamily Sprite Menu\+::backround\+Table}
+
+
+
+Object Sprite use to show table. 
+
+\mbox{\Hypertarget{class_menu_aebe58c2990f73850b744a2d54db9292c}\label{class_menu_aebe58c2990f73850b744a2d54db9292c}} 
+\index{Menu@{Menu}!buttonExit@{buttonExit}}
+\index{buttonExit@{buttonExit}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{buttonExit}{buttonExit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_button}{Button}} Menu\+::button\+Exit}
+
+
+
+Object buttton to create and show button. 
+
+\mbox{\Hypertarget{class_menu_a73244ff67da57a1779a4df885deab569}\label{class_menu_a73244ff67da57a1779a4df885deab569}} 
+\index{Menu@{Menu}!buttonStart@{buttonStart}}
+\index{buttonStart@{buttonStart}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{buttonStart}{buttonStart}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_button}{Button}} Menu\+::button\+Start}
+
+
+
+Object buttton to create and show button. 
+
+\mbox{\Hypertarget{class_menu_ac3517a8bf4a721b720d79679a20dae6e}\label{class_menu_ac3517a8bf4a721b720d79679a20dae6e}} 
+\index{Menu@{Menu}!choose@{choose}}
+\index{choose@{choose}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{choose}{choose}}
+{\footnotesize\ttfamily int Menu\+::choose}
+
+
+
+Value to hold a choose. 
+
+\mbox{\Hypertarget{class_menu_a2ae18d26ab593cd9a635df5b819a3d72}\label{class_menu_a2ae18d26ab593cd9a635df5b819a3d72}} 
+\index{Menu@{Menu}!dbcontroler@{dbcontroler}}
+\index{dbcontroler@{dbcontroler}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{dbcontroler}{dbcontroler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_d_bcontroler}{D\+Bcontroler}} Menu\+::dbcontroler}
+
+
+
+Object class D\+B\+Controller use to connect a database. 
+
+\mbox{\Hypertarget{class_menu_a19a28a7def0d5c7b43f2a2e97bca08b3}\label{class_menu_a19a28a7def0d5c7b43f2a2e97bca08b3}} 
+\index{Menu@{Menu}!delete\_b@{delete\_b}}
+\index{delete\_b@{delete\_b}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{delete\_b}{delete\_b}}
+{\footnotesize\ttfamily Rectangle\+Shape Menu\+::delete\+\_\+b}
+
+
+
+Object use to check if button delete is click. 
+
+\mbox{\Hypertarget{class_menu_abfd154ce7b19dca62d1ce8483c6f7bba}\label{class_menu_abfd154ce7b19dca62d1ce8483c6f7bba}} 
+\index{Menu@{Menu}!height@{height}}
+\index{height@{height}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int Menu\+::height}
+
+
+
+Height window. 
+
+\mbox{\Hypertarget{class_menu_a8b15982b6de0357aa57b45206dc31866}\label{class_menu_a8b15982b6de0357aa57b45206dc31866}} 
+\index{Menu@{Menu}!rectangle\_choose@{rectangle\_choose}}
+\index{rectangle\_choose@{rectangle\_choose}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{rectangle\_choose}{rectangle\_choose}}
+{\footnotesize\ttfamily Rectangle\+Shape$\ast$ Menu\+::rectangle\+\_\+choose}
+
+
+
+Object use to check who row table is click. 
+
+\mbox{\Hypertarget{class_menu_a6a741a6867991754e3cc531443f4f11e}\label{class_menu_a6a741a6867991754e3cc531443f4f11e}} 
+\index{Menu@{Menu}!res@{res}}
+\index{res@{res}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{res}{res}}
+{\footnotesize\ttfamily M\+Y\+S\+Q\+L\+\_\+\+R\+ES$\ast$ Menu\+::res}
+
+
+
+Object use to hold a database get value. 
+
+\mbox{\Hypertarget{class_menu_aae24fb1cb3584ef79f8a7e743b3b69ec}\label{class_menu_aae24fb1cb3584ef79f8a7e743b3b69ec}} 
+\index{Menu@{Menu}!row@{row}}
+\index{row@{row}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{row}{row}}
+{\footnotesize\ttfamily M\+Y\+S\+Q\+L\+\_\+\+R\+OW Menu\+::row}
+
+
+
+Object hold a row witch data get with database. 
+
+\mbox{\Hypertarget{class_menu_a4bac6997dc683096fc907e4e401fc7a5}\label{class_menu_a4bac6997dc683096fc907e4e401fc7a5}} 
+\index{Menu@{Menu}!size@{size}}
+\index{size@{size}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int Menu\+::size}
+
+
+
+Value hold count a champion get a database. 
+
+\mbox{\Hypertarget{class_menu_ac76f2c4967789b0345ed4c21b63ae45b}\label{class_menu_ac76f2c4967789b0345ed4c21b63ae45b}} 
+\index{Menu@{Menu}!Text\_Data@{Text\_Data}}
+\index{Text\_Data@{Text\_Data}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{Text\_Data}{Text\_Data}}
+{\footnotesize\ttfamily Text$\ast$$\ast$ Menu\+::\+Text\+\_\+\+Data}
+
+
+
+Dynamic value Text to show a chammpion in table . 
+
+\mbox{\Hypertarget{class_menu_a0edddfda0319fc24d00ca6ed610ea59b}\label{class_menu_a0edddfda0319fc24d00ca6ed610ea59b}} 
+\index{Menu@{Menu}!title@{title}}
+\index{title@{title}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily string Menu\+::title}
+
+
+
+Values use to keep name widow. 
+
+\mbox{\Hypertarget{class_menu_a30ec519ffccb75388150c64175c4959b}\label{class_menu_a30ec519ffccb75388150c64175c4959b}} 
+\index{Menu@{Menu}!width@{width}}
+\index{width@{width}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int Menu\+::width}
+
+
+
+Width windows. 
+
+\mbox{\Hypertarget{class_menu_af956ca99e1df479a90534416825e5940}\label{class_menu_af956ca99e1df479a90534416825e5940}} 
+\index{Menu@{Menu}!window@{window}}
+\index{window@{window}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_window___base}{Window\+\_\+\+Base}} Menu\+::window}
+
+
+
+Object a base window class use to create window. 
+

@@ -4,19 +4,23 @@
 using namespace std;
 using namespace sf;
 
-/*
-Base class use to make graphic intefejs
-*/
+/// Base class use to make graphic interface.
 class Window_Base
 {
 public:
-	//constructor
+	/// Constructor Class Window_Base.
+	/// <param name="title"> - Title of window</param>
+	/// <param name="width"> - Width window</param>
+	/// <param name="height"> - Height window</param>
+	/// <param name="backroundPath"> - Path to basic background image</param>
 	Window_Base(String title, int width, int height, String backroundPath);
+	/// Default Constructor Class Window_Base.
 	Window_Base();
-	//destructor
+	/// Destructor Window_Base.
 	~Window_Base();
-	//function to get make window 
+	/// Function to get make window.
 	RenderWindow &getWindows();
+	/// Basic background image.
 	Sprite backroundImage;
 protected:
 	//value help to representation backround

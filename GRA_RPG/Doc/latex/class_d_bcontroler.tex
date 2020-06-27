@@ -1,0 +1,310 @@
+\hypertarget{class_d_bcontroler}{}\doxysection{D\+Bcontroler Class Reference}
+\label{class_d_bcontroler}\index{DBcontroler@{DBcontroler}}
+
+
+Class responsible for database operation.  
+
+
+
+
+{\ttfamily \#include $<$D\+Bcontroler.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_d_bcontroler_ac9eddc09d27d694cf04628fece5e7022}{D\+Bcontroler}} ()
+\begin{DoxyCompactList}\small\item\em Constructor establishing a connection to the database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_d_bcontroler_a9acea8c2b2cba13b6af74866a9e7c924}{$\sim$\+D\+Bcontroler}} ()
+\begin{DoxyCompactList}\small\item\em Destructor disconnection to the database. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_d_bcontroler_a3865680a538cfdb5237e5b7bfb289d38}{check\+User}} (int id)
+\begin{DoxyCompactList}\small\item\em Function check the user exists in the database. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_d_bcontroler_a475752b1d30d7cfdd5d6b3cc5e8623f4}{check\+User}} (std\+::string login)
+\begin{DoxyCompactList}\small\item\em Function check the user exists in the database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_d_bcontroler_ab8dac654cef43895365e3765f1375b71}{update\+Champion}} (\mbox{\hyperlink{class_champion}{Champion}} $\ast$champ)
+\begin{DoxyCompactList}\small\item\em Update function for data downloaded from player and amending the values in the database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_d_bcontroler_a97466ddc137930dcc8222d333ecf2b79}{add\+Champion}} (\mbox{\hyperlink{class_champion}{Champion}} $\ast$champ, int class\+\_\+hero, int id\+User)
+\begin{DoxyCompactList}\small\item\em Function adding a new character to the database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_d_bcontroler_afc1d9e45091727c83d1d39577faa490b}{add\+Heroes}} (int id\+User)
+\begin{DoxyCompactList}\small\item\em Function to assign the created champion to the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_d_bcontroler_a69fb290b5bb0e6f4d76c3d379b32c40f}{delete\+Heroes}} (int id\+User, int id\+Champion)
+\begin{DoxyCompactList}\small\item\em function removing to player\textquotesingle{}s character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_d_bcontroler_a9bdfddb2c379caf6728d2027ce5aef8e}{delete\+Heroe}} (int id\+User)
+\begin{DoxyCompactList}\small\item\em function removing to player\textquotesingle{}s character. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_d_bcontroler_ab9148256e5bf31541b172102d9bf8ff6}{add\+User}} (std\+::string login, std\+::string password)
+\begin{DoxyCompactList}\small\item\em Function adding a new user. \end{DoxyCompactList}\item 
+M\+Y\+S\+Q\+L\+\_\+\+R\+OW \mbox{\hyperlink{class_d_bcontroler_a114daa19a6b6a61a2c707611ec15bc7a}{get\+User}} (std\+::string login, std\+::string password)
+\begin{DoxyCompactList}\small\item\em Function finding user id. \end{DoxyCompactList}\item 
+M\+Y\+S\+Q\+L\+\_\+\+R\+ES $\ast$ \mbox{\hyperlink{class_d_bcontroler_a8d7ed997757a706e884b08f4418e195f}{get\+Champions}} (int id)
+\begin{DoxyCompactList}\small\item\em Function finding all player\textquotesingle{}s champions. \end{DoxyCompactList}\item 
+M\+Y\+S\+Q\+L\+\_\+\+R\+OW \mbox{\hyperlink{class_d_bcontroler_a26c7c98a58b9ae51f29be1ba3f5b0bdd}{get\+Prof}} (int id)
+\begin{DoxyCompactList}\small\item\em Function finds what class the characters is. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_champion}{Champion}} $\ast$ \mbox{\hyperlink{class_d_bcontroler_aecfb61aaf602460bb913301a4a6581b6}{get\+Champion}} (int id)
+\begin{DoxyCompactList}\small\item\em Function creates a new character 
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ champion\textquotesingle{}s id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to new character
+\end{DoxyReturn}
+\end{DoxyCompactList}\item 
+M\+Y\+S\+Q\+L\+\_\+\+R\+ES $\ast$ \mbox{\hyperlink{class_d_bcontroler_a592532eb375c58953354688aed806190}{random\+Champion}} (int id)
+\begin{DoxyCompactList}\small\item\em Function finding 3 random character different to given id \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class responsible for database operation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_d_bcontroler_ac9eddc09d27d694cf04628fece5e7022}\label{class_d_bcontroler_ac9eddc09d27d694cf04628fece5e7022}} 
+\index{DBcontroler@{DBcontroler}!DBcontroler@{DBcontroler}}
+\index{DBcontroler@{DBcontroler}!DBcontroler@{DBcontroler}}
+\doxysubsubsection{\texorpdfstring{DBcontroler()}{DBcontroler()}}
+{\footnotesize\ttfamily D\+Bcontroler\+::\+D\+Bcontroler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor establishing a connection to the database. 
+
+\mbox{\Hypertarget{class_d_bcontroler_a9acea8c2b2cba13b6af74866a9e7c924}\label{class_d_bcontroler_a9acea8c2b2cba13b6af74866a9e7c924}} 
+\index{DBcontroler@{DBcontroler}!````~DBcontroler@{$\sim$DBcontroler}}
+\index{````~DBcontroler@{$\sim$DBcontroler}!DBcontroler@{DBcontroler}}
+\doxysubsubsection{\texorpdfstring{$\sim$DBcontroler()}{~DBcontroler()}}
+{\footnotesize\ttfamily D\+Bcontroler\+::$\sim$\+D\+Bcontroler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor disconnection to the database. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_d_bcontroler_a97466ddc137930dcc8222d333ecf2b79}\label{class_d_bcontroler_a97466ddc137930dcc8222d333ecf2b79}} 
+\index{DBcontroler@{DBcontroler}!addChampion@{addChampion}}
+\index{addChampion@{addChampion}!DBcontroler@{DBcontroler}}
+\doxysubsubsection{\texorpdfstring{addChampion()}{addChampion()}}
+{\footnotesize\ttfamily void D\+Bcontroler\+::add\+Champion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_champion}{Champion}} $\ast$}]{champ,  }\item[{int}]{class\+\_\+hero,  }\item[{int}]{id\+User }\end{DoxyParamCaption})}
+
+
+
+Function adding a new character to the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em champ} & -\/ \mbox{\hyperlink{class_champion}{Champion}} class object with generated basic statistics\\
+\hline
+{\em class\+\_\+hero} & -\/ player\textquotesingle{}s chosen character class\\
+\hline
+{\em id\+User} & -\/ player\textquotesingle{}s id\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bcontroler_afc1d9e45091727c83d1d39577faa490b}\label{class_d_bcontroler_afc1d9e45091727c83d1d39577faa490b}} 
+\index{DBcontroler@{DBcontroler}!addHeroes@{addHeroes}}
+\index{addHeroes@{addHeroes}!DBcontroler@{DBcontroler}}
+\doxysubsubsection{\texorpdfstring{addHeroes()}{addHeroes()}}
+{\footnotesize\ttfamily void D\+Bcontroler\+::add\+Heroes (\begin{DoxyParamCaption}\item[{int}]{id\+User }\end{DoxyParamCaption})}
+
+
+
+Function to assign the created champion to the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+User} & -\/ player\textquotesingle{}s id\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bcontroler_ab9148256e5bf31541b172102d9bf8ff6}\label{class_d_bcontroler_ab9148256e5bf31541b172102d9bf8ff6}} 
+\index{DBcontroler@{DBcontroler}!addUser@{addUser}}
+\index{addUser@{addUser}!DBcontroler@{DBcontroler}}
+\doxysubsubsection{\texorpdfstring{addUser()}{addUser()}}
+{\footnotesize\ttfamily bool D\+Bcontroler\+::add\+User (\begin{DoxyParamCaption}\item[{std\+::string}]{login,  }\item[{std\+::string}]{password }\end{DoxyParamCaption})}
+
+
+
+Function adding a new user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & -\/ player\textquotesingle{}s login\\
+\hline
+{\em password} & -\/ player\textquotesingle{}s password\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+confirm adding new user -\/ true or false
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bcontroler_a3865680a538cfdb5237e5b7bfb289d38}\label{class_d_bcontroler_a3865680a538cfdb5237e5b7bfb289d38}} 
+\index{DBcontroler@{DBcontroler}!checkUser@{checkUser}}
+\index{checkUser@{checkUser}!DBcontroler@{DBcontroler}}
+\doxysubsubsection{\texorpdfstring{checkUser()}{checkUser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool D\+Bcontroler\+::check\+User (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Function check the user exists in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ id user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bcontroler_a475752b1d30d7cfdd5d6b3cc5e8623f4}\label{class_d_bcontroler_a475752b1d30d7cfdd5d6b3cc5e8623f4}} 
+\index{DBcontroler@{DBcontroler}!checkUser@{checkUser}}
+\index{checkUser@{checkUser}!DBcontroler@{DBcontroler}}
+\doxysubsubsection{\texorpdfstring{checkUser()}{checkUser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool D\+Bcontroler\+::check\+User (\begin{DoxyParamCaption}\item[{std\+::string}]{login }\end{DoxyParamCaption})}
+
+
+
+Function check the user exists in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & -\/ login given by user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bcontroler_a9bdfddb2c379caf6728d2027ce5aef8e}\label{class_d_bcontroler_a9bdfddb2c379caf6728d2027ce5aef8e}} 
+\index{DBcontroler@{DBcontroler}!deleteHeroe@{deleteHeroe}}
+\index{deleteHeroe@{deleteHeroe}!DBcontroler@{DBcontroler}}
+\doxysubsubsection{\texorpdfstring{deleteHeroe()}{deleteHeroe()}}
+{\footnotesize\ttfamily void D\+Bcontroler\+::delete\+Heroe (\begin{DoxyParamCaption}\item[{int}]{id\+User }\end{DoxyParamCaption})}
+
+
+
+function removing to player\textquotesingle{}s character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+User} & -\/ player\textquotesingle{}s id\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bcontroler_a69fb290b5bb0e6f4d76c3d379b32c40f}\label{class_d_bcontroler_a69fb290b5bb0e6f4d76c3d379b32c40f}} 
+\index{DBcontroler@{DBcontroler}!deleteHeroes@{deleteHeroes}}
+\index{deleteHeroes@{deleteHeroes}!DBcontroler@{DBcontroler}}
+\doxysubsubsection{\texorpdfstring{deleteHeroes()}{deleteHeroes()}}
+{\footnotesize\ttfamily void D\+Bcontroler\+::delete\+Heroes (\begin{DoxyParamCaption}\item[{int}]{id\+User,  }\item[{int}]{id\+Champion }\end{DoxyParamCaption})}
+
+
+
+function removing to player\textquotesingle{}s character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+User} & -\/ player\textquotesingle{}s id\\
+\hline
+{\em id\+Champion} & -\/ player\textquotesingle{}s character id\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bcontroler_aecfb61aaf602460bb913301a4a6581b6}\label{class_d_bcontroler_aecfb61aaf602460bb913301a4a6581b6}} 
+\index{DBcontroler@{DBcontroler}!getChampion@{getChampion}}
+\index{getChampion@{getChampion}!DBcontroler@{DBcontroler}}
+\doxysubsubsection{\texorpdfstring{getChampion()}{getChampion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_champion}{Champion}} $\ast$ D\+Bcontroler\+::get\+Champion (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Function creates a new character 
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ champion\textquotesingle{}s id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to new character
+\end{DoxyReturn}
+
+
+\mbox{\Hypertarget{class_d_bcontroler_a8d7ed997757a706e884b08f4418e195f}\label{class_d_bcontroler_a8d7ed997757a706e884b08f4418e195f}} 
+\index{DBcontroler@{DBcontroler}!getChampions@{getChampions}}
+\index{getChampions@{getChampions}!DBcontroler@{DBcontroler}}
+\doxysubsubsection{\texorpdfstring{getChampions()}{getChampions()}}
+{\footnotesize\ttfamily M\+Y\+S\+Q\+L\+\_\+\+R\+ES $\ast$ D\+Bcontroler\+::get\+Champions (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Function finding all player\textquotesingle{}s champions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ user\textquotesingle{}s id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rows with all player\textquotesingle{}s champions
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bcontroler_a26c7c98a58b9ae51f29be1ba3f5b0bdd}\label{class_d_bcontroler_a26c7c98a58b9ae51f29be1ba3f5b0bdd}} 
+\index{DBcontroler@{DBcontroler}!getProf@{getProf}}
+\index{getProf@{getProf}!DBcontroler@{DBcontroler}}
+\doxysubsubsection{\texorpdfstring{getProf()}{getProf()}}
+{\footnotesize\ttfamily M\+Y\+S\+Q\+L\+\_\+\+R\+OW D\+Bcontroler\+::get\+Prof (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Function finds what class the characters is. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ champion\textquotesingle{}s id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Row with id proffesion
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bcontroler_a114daa19a6b6a61a2c707611ec15bc7a}\label{class_d_bcontroler_a114daa19a6b6a61a2c707611ec15bc7a}} 
+\index{DBcontroler@{DBcontroler}!getUser@{getUser}}
+\index{getUser@{getUser}!DBcontroler@{DBcontroler}}
+\doxysubsubsection{\texorpdfstring{getUser()}{getUser()}}
+{\footnotesize\ttfamily M\+Y\+S\+Q\+L\+\_\+\+R\+OW D\+Bcontroler\+::get\+User (\begin{DoxyParamCaption}\item[{std\+::string}]{login,  }\item[{std\+::string}]{password }\end{DoxyParamCaption})}
+
+
+
+Function finding user id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & -\/ user\textquotesingle{}s login\\
+\hline
+{\em password} & -\/ user\textquotesingle{}s password\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Row with user\textquotesingle{}s id
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bcontroler_a592532eb375c58953354688aed806190}\label{class_d_bcontroler_a592532eb375c58953354688aed806190}} 
+\index{DBcontroler@{DBcontroler}!randomChampion@{randomChampion}}
+\index{randomChampion@{randomChampion}!DBcontroler@{DBcontroler}}
+\doxysubsubsection{\texorpdfstring{randomChampion()}{randomChampion()}}
+{\footnotesize\ttfamily M\+Y\+S\+Q\+L\+\_\+\+R\+ES $\ast$ D\+Bcontroler\+::random\+Champion (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Function finding 3 random character different to given id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ character\textquotesingle{}s id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rows with champions data
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bcontroler_ab8dac654cef43895365e3765f1375b71}\label{class_d_bcontroler_ab8dac654cef43895365e3765f1375b71}} 
+\index{DBcontroler@{DBcontroler}!updateChampion@{updateChampion}}
+\index{updateChampion@{updateChampion}!DBcontroler@{DBcontroler}}
+\doxysubsubsection{\texorpdfstring{updateChampion()}{updateChampion()}}
+{\footnotesize\ttfamily void D\+Bcontroler\+::update\+Champion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_champion}{Champion}} $\ast$}]{champ }\end{DoxyParamCaption})}
+
+
+
+Update function for data downloaded from player and amending the values in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em champ} & -\/ player\textquotesingle{}s object\\
+\hline
+\end{DoxyParams}

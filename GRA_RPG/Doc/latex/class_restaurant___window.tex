@@ -1,0 +1,211 @@
+\hypertarget{class_restaurant___window}{}\doxysection{Restaurant\+\_\+\+Window Class Reference}
+\label{class_restaurant___window}\index{Restaurant\_Window@{Restaurant\_Window}}
+
+
+Class restaurant to representation graphic Window object restaurant inherit \mbox{\hyperlink{class_window___base}{Window\+\_\+\+Base}}.  
+
+
+
+
+{\ttfamily \#include $<$Restaurant\+\_\+\+Window.\+h$>$}
+
+Inheritance diagram for Restaurant\+\_\+\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_restaurant___window}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_restaurant___window_aef2b83d70631d584fb4f3a36a1ea4844}{Restaurant\+\_\+\+Window}} (\mbox{\hyperlink{class_champion}{Champion}} $\ast$champ, int id\+Use)
+\begin{DoxyCompactList}\small\item\em Constructor \mbox{\hyperlink{class_restaurant___window}{Restaurant\+\_\+\+Window}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_restaurant___window_a8ce568ba279eb76f2b3d2b0c26ec36fe}{$\sim$\+Restaurant\+\_\+\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_restaurant___window_a4c3cfd4a5fc5c046834f53e25588df18}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Function start showing graphic interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Font \mbox{\hyperlink{class_restaurant___window_a14ad9daf5d9401f122bb3d6a019adc0a}{arial}}
+\begin{DoxyCompactList}\small\item\em Variable aria lto load a font. \end{DoxyCompactList}\item 
+Text $\ast$$\ast$ \mbox{\hyperlink{class_restaurant___window_aca031208a20428c66442191a76d7c8f1}{Text\+\_\+\+Data}}
+\begin{DoxyCompactList}\small\item\em Value dyamic 2D array Text use to hold a text. \end{DoxyCompactList}\item 
+Sprite \mbox{\hyperlink{class_restaurant___window_a362e16a6b12038660a311d89440ab8d4}{backround\+Table}}
+\begin{DoxyCompactList}\small\item\em Variable Sprite use to show a table. \end{DoxyCompactList}\item 
+Texture \mbox{\hyperlink{class_restaurant___window_a5a4daab71967602de055f8f575bebe76}{background\+Tab}}
+\begin{DoxyCompactList}\small\item\em Variable Texture use to load a image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_d_bcontroler}{D\+Bcontroler}} \mbox{\hyperlink{class_restaurant___window_ae93cb5e4fdeed59819ad685c657127fe}{dbcontroler}}
+\begin{DoxyCompactList}\small\item\em Object use to connect a database. \end{DoxyCompactList}\item 
+M\+Y\+S\+Q\+L\+\_\+\+R\+OW \mbox{\hyperlink{class_restaurant___window_a8ff52b00e46253f463beb0707ab3fef6}{row}}
+\begin{DoxyCompactList}\small\item\em Object temporary use to hold a row with database value. \end{DoxyCompactList}\item 
+M\+Y\+S\+Q\+L\+\_\+\+R\+ES $\ast$ \mbox{\hyperlink{class_restaurant___window_a466d0e622fb40d5971765797403d7ac1}{res}}
+\begin{DoxyCompactList}\small\item\em Variable use to hold data get a database. \end{DoxyCompactList}\item 
+Rectangle\+Shape $\ast$ \mbox{\hyperlink{class_restaurant___window_a3fe2878a86fa8a59150b410a13e677c1}{rectangle\+\_\+choose}}
+\begin{DoxyCompactList}\small\item\em Dynamic array use to check who row is click. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_restaurant___window_a3734c79a3e6f1546538321ced93520f9}{choose}}
+\begin{DoxyCompactList}\small\item\em Value hold a choose . \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_restaurant___window_ac4cae576400d0fc7e189145081b6cc99}{size}}
+\begin{DoxyCompactList}\small\item\em Variable hold a cout data get with database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_button}{Button}} \mbox{\hyperlink{class_restaurant___window_a67e9fbe35968eda3b17924dd0ad0e700}{button\+Start}}
+\begin{DoxyCompactList}\small\item\em Object class \mbox{\hyperlink{class_button}{Button}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class restaurant to representation graphic Window object restaurant inherit \mbox{\hyperlink{class_window___base}{Window\+\_\+\+Base}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_restaurant___window_aef2b83d70631d584fb4f3a36a1ea4844}\label{class_restaurant___window_aef2b83d70631d584fb4f3a36a1ea4844}} 
+\index{Restaurant\_Window@{Restaurant\_Window}!Restaurant\_Window@{Restaurant\_Window}}
+\index{Restaurant\_Window@{Restaurant\_Window}!Restaurant\_Window@{Restaurant\_Window}}
+\doxysubsubsection{\texorpdfstring{Restaurant\_Window()}{Restaurant\_Window()}}
+{\footnotesize\ttfamily Restaurant\+\_\+\+Window\+::\+Restaurant\+\_\+\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_champion}{Champion}} $\ast$}]{champ,  }\item[{int}]{id\+Use }\end{DoxyParamCaption})}
+
+
+
+Constructor \mbox{\hyperlink{class_restaurant___window}{Restaurant\+\_\+\+Window}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em champ} & -\/ Pointet object \mbox{\hyperlink{class_champion}{Champion}} \\
+\hline
+{\em id\+Use} & -\/ Value use to hold id user\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_restaurant___window_a8ce568ba279eb76f2b3d2b0c26ec36fe}\label{class_restaurant___window_a8ce568ba279eb76f2b3d2b0c26ec36fe}} 
+\index{Restaurant\_Window@{Restaurant\_Window}!````~Restaurant\_Window@{$\sim$Restaurant\_Window}}
+\index{````~Restaurant\_Window@{$\sim$Restaurant\_Window}!Restaurant\_Window@{Restaurant\_Window}}
+\doxysubsubsection{\texorpdfstring{$\sim$Restaurant\_Window()}{~Restaurant\_Window()}}
+{\footnotesize\ttfamily Restaurant\+\_\+\+Window\+::$\sim$\+Restaurant\+\_\+\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_restaurant___window_a4c3cfd4a5fc5c046834f53e25588df18}\label{class_restaurant___window_a4c3cfd4a5fc5c046834f53e25588df18}} 
+\index{Restaurant\_Window@{Restaurant\_Window}!Start@{Start}}
+\index{Start@{Start}!Restaurant\_Window@{Restaurant\_Window}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Restaurant\+\_\+\+Window\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function start showing graphic interface. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_restaurant___window_a14ad9daf5d9401f122bb3d6a019adc0a}\label{class_restaurant___window_a14ad9daf5d9401f122bb3d6a019adc0a}} 
+\index{Restaurant\_Window@{Restaurant\_Window}!arial@{arial}}
+\index{arial@{arial}!Restaurant\_Window@{Restaurant\_Window}}
+\doxysubsubsection{\texorpdfstring{arial}{arial}}
+{\footnotesize\ttfamily Font Restaurant\+\_\+\+Window\+::arial}
+
+
+
+Variable aria lto load a font. 
+
+\mbox{\Hypertarget{class_restaurant___window_a5a4daab71967602de055f8f575bebe76}\label{class_restaurant___window_a5a4daab71967602de055f8f575bebe76}} 
+\index{Restaurant\_Window@{Restaurant\_Window}!backgroundTab@{backgroundTab}}
+\index{backgroundTab@{backgroundTab}!Restaurant\_Window@{Restaurant\_Window}}
+\doxysubsubsection{\texorpdfstring{backgroundTab}{backgroundTab}}
+{\footnotesize\ttfamily Texture Restaurant\+\_\+\+Window\+::background\+Tab}
+
+
+
+Variable Texture use to load a image. 
+
+\mbox{\Hypertarget{class_restaurant___window_a362e16a6b12038660a311d89440ab8d4}\label{class_restaurant___window_a362e16a6b12038660a311d89440ab8d4}} 
+\index{Restaurant\_Window@{Restaurant\_Window}!backroundTable@{backroundTable}}
+\index{backroundTable@{backroundTable}!Restaurant\_Window@{Restaurant\_Window}}
+\doxysubsubsection{\texorpdfstring{backroundTable}{backroundTable}}
+{\footnotesize\ttfamily Sprite Restaurant\+\_\+\+Window\+::backround\+Table}
+
+
+
+Variable Sprite use to show a table. 
+
+\mbox{\Hypertarget{class_restaurant___window_a67e9fbe35968eda3b17924dd0ad0e700}\label{class_restaurant___window_a67e9fbe35968eda3b17924dd0ad0e700}} 
+\index{Restaurant\_Window@{Restaurant\_Window}!buttonStart@{buttonStart}}
+\index{buttonStart@{buttonStart}!Restaurant\_Window@{Restaurant\_Window}}
+\doxysubsubsection{\texorpdfstring{buttonStart}{buttonStart}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_button}{Button}} Restaurant\+\_\+\+Window\+::button\+Start}
+
+
+
+Object class \mbox{\hyperlink{class_button}{Button}}. 
+
+\mbox{\Hypertarget{class_restaurant___window_a3734c79a3e6f1546538321ced93520f9}\label{class_restaurant___window_a3734c79a3e6f1546538321ced93520f9}} 
+\index{Restaurant\_Window@{Restaurant\_Window}!choose@{choose}}
+\index{choose@{choose}!Restaurant\_Window@{Restaurant\_Window}}
+\doxysubsubsection{\texorpdfstring{choose}{choose}}
+{\footnotesize\ttfamily int Restaurant\+\_\+\+Window\+::choose}
+
+
+
+Value hold a choose . 
+
+\mbox{\Hypertarget{class_restaurant___window_ae93cb5e4fdeed59819ad685c657127fe}\label{class_restaurant___window_ae93cb5e4fdeed59819ad685c657127fe}} 
+\index{Restaurant\_Window@{Restaurant\_Window}!dbcontroler@{dbcontroler}}
+\index{dbcontroler@{dbcontroler}!Restaurant\_Window@{Restaurant\_Window}}
+\doxysubsubsection{\texorpdfstring{dbcontroler}{dbcontroler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_d_bcontroler}{D\+Bcontroler}} Restaurant\+\_\+\+Window\+::dbcontroler}
+
+
+
+Object use to connect a database. 
+
+\mbox{\Hypertarget{class_restaurant___window_a3fe2878a86fa8a59150b410a13e677c1}\label{class_restaurant___window_a3fe2878a86fa8a59150b410a13e677c1}} 
+\index{Restaurant\_Window@{Restaurant\_Window}!rectangle\_choose@{rectangle\_choose}}
+\index{rectangle\_choose@{rectangle\_choose}!Restaurant\_Window@{Restaurant\_Window}}
+\doxysubsubsection{\texorpdfstring{rectangle\_choose}{rectangle\_choose}}
+{\footnotesize\ttfamily Rectangle\+Shape$\ast$ Restaurant\+\_\+\+Window\+::rectangle\+\_\+choose}
+
+
+
+Dynamic array use to check who row is click. 
+
+\mbox{\Hypertarget{class_restaurant___window_a466d0e622fb40d5971765797403d7ac1}\label{class_restaurant___window_a466d0e622fb40d5971765797403d7ac1}} 
+\index{Restaurant\_Window@{Restaurant\_Window}!res@{res}}
+\index{res@{res}!Restaurant\_Window@{Restaurant\_Window}}
+\doxysubsubsection{\texorpdfstring{res}{res}}
+{\footnotesize\ttfamily M\+Y\+S\+Q\+L\+\_\+\+R\+ES$\ast$ Restaurant\+\_\+\+Window\+::res}
+
+
+
+Variable use to hold data get a database. 
+
+\mbox{\Hypertarget{class_restaurant___window_a8ff52b00e46253f463beb0707ab3fef6}\label{class_restaurant___window_a8ff52b00e46253f463beb0707ab3fef6}} 
+\index{Restaurant\_Window@{Restaurant\_Window}!row@{row}}
+\index{row@{row}!Restaurant\_Window@{Restaurant\_Window}}
+\doxysubsubsection{\texorpdfstring{row}{row}}
+{\footnotesize\ttfamily M\+Y\+S\+Q\+L\+\_\+\+R\+OW Restaurant\+\_\+\+Window\+::row}
+
+
+
+Object temporary use to hold a row with database value. 
+
+\mbox{\Hypertarget{class_restaurant___window_ac4cae576400d0fc7e189145081b6cc99}\label{class_restaurant___window_ac4cae576400d0fc7e189145081b6cc99}} 
+\index{Restaurant\_Window@{Restaurant\_Window}!size@{size}}
+\index{size@{size}!Restaurant\_Window@{Restaurant\_Window}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int Restaurant\+\_\+\+Window\+::size}
+
+
+
+Variable hold a cout data get with database. 
+
+\mbox{\Hypertarget{class_restaurant___window_aca031208a20428c66442191a76d7c8f1}\label{class_restaurant___window_aca031208a20428c66442191a76d7c8f1}} 
+\index{Restaurant\_Window@{Restaurant\_Window}!Text\_Data@{Text\_Data}}
+\index{Text\_Data@{Text\_Data}!Restaurant\_Window@{Restaurant\_Window}}
+\doxysubsubsection{\texorpdfstring{Text\_Data}{Text\_Data}}
+{\footnotesize\ttfamily Text$\ast$$\ast$ Restaurant\+\_\+\+Window\+::\+Text\+\_\+\+Data}
+
+
+
+Value dyamic 2D array Text use to hold a text. 
+

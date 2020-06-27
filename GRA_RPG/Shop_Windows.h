@@ -3,20 +3,22 @@
 #include "Map_Windows.h"
 #include "Champion.h"
 
-/*
-Class shop to representation graphic Window object shop
-*/
+/// Class shop to representation graphic Window object shop.
 class Shop_Windows : public Window_Base
 {
 public:
-	//constructor
+	/// Constructor Class Shop_Windows.
+	/// <param name="champ"> - character witch enter to window</param>
+	/// <param name="idUse"> - user's id</param>
 	Shop_Windows(Champion* champ,int idUse);
-	//destructor
+	/// Destructor Shop_Windows.
 	~Shop_Windows();
-	//function start showing 
+	/// Function start showing window.
 	void Start();
-
-	bool moneycheck(int);
+	/// Function checks if the character has enough cash.
+	/// <param name="money"> - the money held by character</param>
+	/// <returns>true or false</returns>
+	bool moneycheck(int money);
 private:
 	//bsae window class use to create window
 	int idUser;

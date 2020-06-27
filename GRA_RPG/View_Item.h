@@ -2,25 +2,33 @@
 #include <SFML/Graphics.hpp>
 using namespace std;
 using namespace sf;
-/*
-Class use  to representation  some graphics 
-*/
+
+/// Class use to representation some graphics.
 class View_Item
 {
 public:
-	//constructor
+	/// Default constructor Class View_Item.
 	View_Item();
+	/// Constructor Class View_Item.
+	/// <param name="Path"> - Path to image</param>
+	/// <param name="x"> - Width position</param>
+	/// <param name="y"> - Height position</param>
 	View_Item(String Path,int x ,int y);
-	//destructor
+	/// Default constructor Class View_Item.
 	~View_Item();
-	//some values help to representant graphic
+	/// Image as Sprite.
 	Sprite Image;
+	/// Image as Texture.
 	Texture item;
-	//function return object to show graphic
+	/// Function return object to show graphic
 	Sprite &getImage();
+	///  Function to set new image.
+	/// <param name="Path"> - Path to new image</param>
+	/// <param name="x"> - Width position</param>
+	/// <param name="y"> - Height position</param>
 	void set_Image(String Path, int x, int y);
 private:
-	//value to represent position graphic
+	// value to represent position graphic
 	int x,y;
 };
 

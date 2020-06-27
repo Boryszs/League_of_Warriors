@@ -1,0 +1,126 @@
+\hypertarget{class_warrior}{}\doxysection{Warrior Class Reference}
+\label{class_warrior}\index{Warrior@{Warrior}}
+
+
+Class \mbox{\hyperlink{class_warrior}{Warrior}} Inherits a champion.  
+
+
+
+
+{\ttfamily \#include $<$Warrior.\+h$>$}
+
+Inheritance diagram for Warrior\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_warrior}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_warrior_abb195a465d81bbfb2bfd817234421811}{Warrior}} (const unsigned id, const std\+::string n, unsigned int l, unsigned int e, double m, int he, int st, int de, int ma, int def, int lu)
+\begin{DoxyCompactList}\small\item\em Constructor \mbox{\hyperlink{class_warrior}{Warrior}} cause a champion constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_warrior}{Warrior}} $\ast$ \mbox{\hyperlink{class_warrior_a450a89a26b0b38f7e3b16fd38f345eef}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Virtual function clone to clone object. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_warrior_a9e0dc01602c5a7e39917fde6dc193c53}{attack}} () override
+\begin{DoxyCompactList}\small\item\em Virtual function attack. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_warrior_a4b7280eac22246616269ee7da6103c8d}{block}} () override
+\begin{DoxyCompactList}\small\item\em Virtual function block. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class \mbox{\hyperlink{class_warrior}{Warrior}} Inherits a champion. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_warrior_abb195a465d81bbfb2bfd817234421811}\label{class_warrior_abb195a465d81bbfb2bfd817234421811}} 
+\index{Warrior@{Warrior}!Warrior@{Warrior}}
+\index{Warrior@{Warrior}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{Warrior()}{Warrior()}}
+{\footnotesize\ttfamily Warrior\+::\+Warrior (\begin{DoxyParamCaption}\item[{const unsigned}]{id,  }\item[{const std\+::string}]{n,  }\item[{unsigned int}]{l,  }\item[{unsigned int}]{e,  }\item[{double}]{m,  }\item[{int}]{he,  }\item[{int}]{st,  }\item[{int}]{de,  }\item[{int}]{ma,  }\item[{int}]{def,  }\item[{int}]{lu }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor \mbox{\hyperlink{class_warrior}{Warrior}} cause a champion constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ Id champion in database\\
+\hline
+{\em n} & -\/ Name champion\\
+\hline
+{\em l} & -\/ Level champion\\
+\hline
+{\em e} & -\/ Experience champion \\
+\hline
+{\em m} & -\/ Money champion \\
+\hline
+{\em he} & -\/ Health champion \\
+\hline
+{\em st} & -\/ Strength champion \\
+\hline
+{\em de} & -\/ Dexerity \mbox{\hyperlink{class_champion}{Champion}}\\
+\hline
+{\em ma} & -\/ Magic champion \\
+\hline
+{\em def} & -\/ Defence champion \\
+\hline
+{\em lu} & -\/ Lucky champion \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_warrior_a9e0dc01602c5a7e39917fde6dc193c53}\label{class_warrior_a9e0dc01602c5a7e39917fde6dc193c53}} 
+\index{Warrior@{Warrior}!attack@{attack}}
+\index{attack@{attack}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{attack()}{attack()}}
+{\footnotesize\ttfamily int Warrior\+::attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function attack. 
+
+\begin{DoxyReturn}{Returns}
+value attack 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_champion_a8c18031647767c21f9404fb2b9a4f50a}{Champion}}.
+
+\mbox{\Hypertarget{class_warrior_a4b7280eac22246616269ee7da6103c8d}\label{class_warrior_a4b7280eac22246616269ee7da6103c8d}} 
+\index{Warrior@{Warrior}!block@{block}}
+\index{block@{block}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{block()}{block()}}
+{\footnotesize\ttfamily int Warrior\+::block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function block. 
+
+\begin{DoxyReturn}{Returns}
+value block 
+\end{DoxyReturn}
+~\newline
+ 
+
+Reimplemented from \mbox{\hyperlink{class_champion_aeb0bde351a92810c03a851966f67691e}{Champion}}.
+
+\mbox{\Hypertarget{class_warrior_a450a89a26b0b38f7e3b16fd38f345eef}\label{class_warrior_a450a89a26b0b38f7e3b16fd38f345eef}} 
+\index{Warrior@{Warrior}!clone@{clone}}
+\index{clone@{clone}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_warrior}{Warrior}}$\ast$ Warrior\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function clone to clone object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer object \mbox{\hyperlink{class_warrior}{Warrior}} 
+\end{DoxyReturn}
+~\newline
+ 
+
+Implements \mbox{\hyperlink{class_champion_ac7bc575fe47cedac1aaecd109404254c}{Champion}}.
+
