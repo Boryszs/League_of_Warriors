@@ -5,11 +5,12 @@
 #include "Fight.h"
 #include "DBcontroler.h"
 
+//
 class RestaurantFight_Window : public Window_Base
 {
 public:
     //consttructor
-    RestaurantFight_Window(Champion* champ, Champion* opon);
+    RestaurantFight_Window(Champion* champ, Champion* opon, int id);
     //destructor
     ~RestaurantFight_Window();
     //function start showing
@@ -21,4 +22,5 @@ private:
     Champion* oponnent;
     Fight fight;
     DBcontroler dbc;
+    int idUser;
 };

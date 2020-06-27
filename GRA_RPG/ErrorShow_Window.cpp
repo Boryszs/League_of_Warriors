@@ -35,13 +35,13 @@ void ErrorShow_Window::Start(string err)
 					window.getWindows().close();
 				}
 			}
+		}
 			erro.setString(err);
 			window.getWindows().clear();
 			window.getWindows().draw(ok);
 			window.getWindows().draw(window.backroundImage);
 			window.getWindows().draw(erro);
 			window.getWindows().display();
-		}
 	
 
 	}

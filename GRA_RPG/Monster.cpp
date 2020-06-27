@@ -5,8 +5,8 @@ using namespace std;
 
 int Monster::attack()
 {
-    int min_attack =  (0.33 * strength) + (0.33 * dexterity) + (0.33 * magic);
-    int max_attack = (0.50 * strength) + (0.50 * dexterity) + (0.50 * magic);
+    int min_attack =  (0.20 * strength) + (0.23 * dexterity) + (0.20 * magic);
+    int max_attack = (0.40 * strength) + (0.39 * dexterity) + (0.40 * magic);
 
     random_device dev;
     mt19937_64 rng(dev());
@@ -27,5 +27,5 @@ int Monster::attack()
 
 int Monster::block()
 {
-    return 0.5 * defence;
+    return 0.2 * defence;
 }

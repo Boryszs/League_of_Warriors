@@ -21,15 +21,21 @@ public:
 	//function update value champion in database 
 	void updateChampion(Champion *champ);
 	//function add champion to database 
-	void addChampion(Champion* champ,int class_hero);
+	void addChampion(Champion* champ,int class_hero,int idUser);
 	//Trgigger 
 	void addHeroes(int idUser);
+	//Delete Heroes 
+	void deleteHeroes(int idUser,int idChampion);
+	//delete heroe
+	void deleteHeroe(int idUser);
 	// funkcja dodaj¹ca usera
 	bool addUser(std::string login, std::string password);
 	// funkcja zwracaj¹ca idUsers na podstawie poprawnych danych (login i passwd) z bazy
 	MYSQL_ROW getUser(std::string login, std::string password);
 	// funkcja zwracaj¹ca idHeroes (iloœæ posiadanych postaci przez u¿ytkownika przy tworzeniu trzeba sprawdzaæ LIMIT 3 !!!)
 	MYSQL_RES* getChampions(int id);
+	//Get professions
+	MYSQL_ROW getProf(int id);
 	// funkcja zwracaj¹ca wskaŸnik na postaæ o danym idHeroes
 	Champion* getChampion(int id);
 	// funkcja zwracaj¹ca losowe rekordy z bazy ró¿ne od id

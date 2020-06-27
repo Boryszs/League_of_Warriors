@@ -8,9 +8,12 @@
 
 class AddHeroe_Window : public Window_Base
 {
+
+private:
+	int idUser;
 public:
 	//Constructor
-	AddHeroe_Window();
+	AddHeroe_Window(int idUser);
 	~AddHeroe_Window();
 	
 

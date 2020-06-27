@@ -12,7 +12,7 @@ View_Item::View_Item()
 }
 View_Item::View_Item(String Path,int x,int y)
 {
-	;
+	
 	if (!item.loadFromFile(Path))
 	{
 		throw MyException("Error module load");

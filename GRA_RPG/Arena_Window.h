@@ -11,7 +11,7 @@ Class arena to representation graphic Window object Arena
 
 public:
 	//constructor
-	Arena_Window(Champion* champ);
+	Arena_Window(Champion* champ,int idUse);
 	//destructor
 	~Arena_Window();
 	//function start showing 
@@ -19,7 +19,7 @@ public:
 	RectangleShape getClickHeal() { return click_heal; }
 	void randMonster();
 private:
-
+	int idUser;
 	Champion* champion;
 	//base window class use to create window
 	Window_Base window;

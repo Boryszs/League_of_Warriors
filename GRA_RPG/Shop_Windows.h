@@ -10,7 +10,7 @@ class Shop_Windows : public Window_Base
 {
 public:
 	//constructor
-	Shop_Windows(Champion* champ);
+	Shop_Windows(Champion* champ,int idUse);
 	//destructor
 	~Shop_Windows();
 	//function start showing 
@@ -19,6 +19,7 @@ public:
 	bool moneycheck(int);
 private:
 	//bsae window class use to create window
+	int idUser;
 	Window_Base window;
 	Champion* champion;
 	RectangleShape r_health;
