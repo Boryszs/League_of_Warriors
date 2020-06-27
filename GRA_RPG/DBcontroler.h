@@ -32,6 +32,8 @@ public:
 	MYSQL_RES* getChampions(int id);
 	// funkcja zwracaj¹ca wskaŸnik na postaæ o danym idHeroes
 	Champion* getChampion(int id);
+	// funkcja zwracaj¹ca losowe rekordy z bazy ró¿ne od id
+	MYSQL_RES* randomChampion(int id);
 	// funckja dodaj¹ca postaæ na podstawie podanej nazyw
 
 

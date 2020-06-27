@@ -151,6 +151,7 @@
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Restaurant_Window.cpp" />
+    <ClCompile Include="ResteurantFight_Window.cpp" />
     <ClCompile Include="Shop_Windows.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="ThrowLoad.cpp" />
@@ -175,6 +176,7 @@
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Nagłówek.h" />
     <ClInclude Include="Restaurant_Window.h" />
+    <ClInclude Include="RestaurantFight_Window.h" />
     <ClInclude Include="Shop_Windows.h" />
     <ClInclude Include="View_Item.h" />
     <ClInclude Include="Warrior.h" />

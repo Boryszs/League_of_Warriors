@@ -29,7 +29,7 @@ public:
 
 	virtual Champion* clone() const = 0;
 
-	int getHealth() { return health; }
+	int getHealth() const { return health; }
 	std::string getName() { return name; }
 	friend std::ostream& operator<<(std::ostream& out, const Champion& p);
 
@@ -42,6 +42,7 @@ public:
 	void addLuck(int luc) { luck += luc; }
 	void addMoney(int mon) { money += mon; }
 	void addExperience(int exp);
+	void takeMoney(double mon);
 	
 	int getId()
 	{

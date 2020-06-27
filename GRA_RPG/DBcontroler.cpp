@@ -130,6 +130,20 @@ Champion* DBcontroler::getChampion(int id)
 	return champ;
 }
 
+MYSQL_RES* DBcontroler::randomChampion(int id)
+{
+	string qerry = "SELECT * FROM `heroe` WHERE `idHeroe` !=" +  to_string(id) + " ORDER BY rand() LIMIT 3;";
+	const char* q = qerry.c_str();
+	qstate = mysql_query(conn, q);
+
+	if (!qstate)
+	{
+		res = mysql_store_result(conn);
+		return res;
+	}
+	return nullptr;
+}
+
 
 void DBcontroler::updateChampion(Champion* champ)
 {
