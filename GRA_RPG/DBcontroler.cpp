@@ -15,6 +15,12 @@ DBcontroler::DBcontroler()
 	{
 		throw MyException("No database connect!!!");
 	}
+	
+}
+
+DBcontroler::~DBcontroler()
+{
+	mysql_close(conn);
 }
 
 DBcontroler::~DBcontroler()

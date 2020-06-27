@@ -29,10 +29,10 @@ public:
 private:
 	int idUser;
 	Champion* champion;
-	//base window class use to create window
 	Window_Base window;
 	View_Item hydra;
 	View_Item heal;
 	RectangleShape click_heal;
+	
 };
 

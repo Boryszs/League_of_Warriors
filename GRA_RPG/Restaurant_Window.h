@@ -42,7 +42,6 @@ public:
 	/// Function start showing graphic interface.
 	void Start();
 private:
-	//bsae window class use to create window
 	int idUser;
 	Window_Base window;
 	Champion* champion;

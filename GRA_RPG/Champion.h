@@ -40,6 +40,7 @@ public:
 	/// Virtual function block.
 	virtual int block() { return 0; }
 	///Function return Helath the value to heal the hero.
+	
 	int heal();
 	/// Function set Health.
 	/// <param name="hp"> - Helth champion </param> 
