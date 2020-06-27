@@ -17,6 +17,11 @@ DBcontroler::DBcontroler()
 	}
 }
 
+DBcontroler::~DBcontroler()
+{
+	mysql_close(conn);
+}
+
 bool DBcontroler::checkUser(int id)
 {
 	string querry = "SELECT * FROM users WHERE idUsers = " + to_string(id) + ";";

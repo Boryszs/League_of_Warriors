@@ -5,15 +5,18 @@
 #include "Fight.h"
 #include "DBcontroler.h"
 
-//
+/// Class to representation graphic Window object Fight betwen players.
 class RestaurantFight_Window : public Window_Base
 {
 public:
-    //consttructor
+    /// Constructor RestaurantFight_Window
+    /// <param name="champ"> - Player's character</param>
+    /// <param name="opon"> - Selected opponent</param>
+    /// <param name="id"> - User's id</param>
     RestaurantFight_Window(Champion* champ, Champion* opon, int id);
-    //destructor
+    /// Destructor Class RestaurantFight_Window
     ~RestaurantFight_Window();
-    //function start showing
+    /// Function start showing RestaurantFight_Window and fight between players.
     void Start();
 private:
     //bsae window class use to create window
