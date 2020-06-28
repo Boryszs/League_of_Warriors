@@ -86,7 +86,9 @@ Restaurant_Window::Restaurant_Window(Champion* champ,int idUse) :window("Restaur
 
 Restaurant_Window::~Restaurant_Window()
 {
-
+	for (int i = 0; i < size + 1; i++)
+		delete[] Text_Data[i];
+	delete[] rectangle_choose;
 }
 
 void Restaurant_Window::Start()
