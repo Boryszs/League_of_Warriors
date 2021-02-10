@@ -5,6 +5,8 @@
 - [Corel-Cormen](https://github.com/Corel-Cormen)
 
 
+[Documentation](https://boryszs.github.io/GRA_RPG/)
+
 The main goal of the project is to create an RPG computer game intended for audiences over the age of thirteen. The player will be able to access functions that allow him to manage the virtual hero, including choosing a character to play the game and taking appropriate steps to improve it, for example increasing energy, financial resources and standard of living. These operations will be performed via the keyboard and mouse using a windowed graphical interface.
 
 <p align="center"><img src="https://user-images.githubusercontent.com/62262900/107512623-60a3f380-6ba7-11eb-9ca9-db7f0722d5e0.gif" width="600" height="600"></p>
