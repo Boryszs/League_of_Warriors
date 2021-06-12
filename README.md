@@ -5,7 +5,7 @@
 - [Corel-Cormen](https://github.com/Corel-Cormen)
 
 
-[Documentation](https://boryszs.github.io/GRA_RPG/)
+[Documentation](https://boryszs.github.io/League_of_Warriors/index.html)
 
 The main goal of the project is to create an RPG computer game intended for audiences over the age of thirteen. The player will be able to access functions that allow him to manage the virtual hero, including choosing a character to play the game and taking appropriate steps to improve it, for example increasing energy, financial resources and standard of living. These operations will be performed via the keyboard and mouse using a windowed graphical interface.
 
